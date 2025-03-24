@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emre Civas - Graphic Design, Webdevelopment</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div><img src="/assets/logo.png" style="width:20%; height:20%"></div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about">01. About</a></li>
+                <li><a href="#projects">02. Projects</a></li>
+                <li><a href="#skillset">03. Skillset</a></li>
+                <li><a href="#contact">04. Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div><img src="/assets/logo.png" style="width:20%; height:20%"></div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()">01. About</a></li>
+                <li><a href="#projects" onclick="toggleMenu()">02. Projects</a></li>
+                <li><a href="#skillset" onclick="toggleMenu()">03. Skillset</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">04. Contact</a></li>
+            </div>
+        </div>
+    </nav>
+  <script src="script.js"></script>  
+</body>
+</html>
