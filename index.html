@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emre Civas - Graphic Design, Webdevelopment</title>
+    <title>Emre Civas - Webdevelopment</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
 <body>
     <nav id="desktop-nav">
-        <div><img src="/assets/logo.png" style="width:20%; height:20%"></div>
+        <div class="logo">
+            <img 
+            src="./assets/logo.png" 
+            alt="Website logo" 
+            style="width:20%; height:20%"/>
+        </div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">01. About</a></li>
@@ -20,7 +25,12 @@
         </div>
     </nav>
     <nav id="hamburger-nav">
-        <div><img src="/assets/logo.png" style="width:20%; height:20%"></div>
+        <div>
+            <img 
+            src="./assets/logo.png" 
+            alt="Website logo" 
+            style="width:20%; height:20%"/>
+        </div>
         <div class="hamburger-menu">
             <div class="hamburger-icon" onclick="toggleMenu()">
                 <span></span>
@@ -35,6 +45,49 @@
             </div>
         </div>
     </nav>
+    <section id="profile">
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">
+                Emre Civas.
+            <br> 
+                Web developer and media designer.</h1>
+            <p class="section__text__p2">
+                I'm specialized in building user friendly digital experiences.
+                Learning new technologies is my biggest hobby. 
+                I like to solve problems to develop my knowledge. 
+            </p>
+
+            <!-- <div class="btn-container">
+                <button class="btn btn-color-2" onclick="location.href='./#contact'">Contact me.
+                </button>
+            </div> -->
+
+            <div id="socials-container">
+                <img 
+                src="./assets/linkedin.png" 
+                alt="My LinkedIn profile"
+                class="icon" 
+                onclick="location.href='https://www.linkedin.com/in/emre-civas/'"
+                />
+                <img 
+                src="./assets/github.png" 
+                alt="My Github profile"
+                class="icon" 
+                onclick="location.href='https://github.com/visi0nz'"
+                />
+            </div>
+        </div>
+    </section>
+
+    <section id="aboutme">
+        <div class="section__pic-container">
+            <img 
+            src="./assets/about-pic.png" 
+            alt="Emre Civas about picture">
+        </div> 
+    </section>
+
   <script src="script.js"></script>  
 </body>
 </html>
