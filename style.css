@@ -10,7 +10,7 @@
 body {
    font-family: "IBM Plex Mono", monospace;
    background-color: rgb(23, 25, 63);
-    
+   counter-reset: counting;
 }
 
 html {
@@ -46,7 +46,7 @@ nav {
 }
 
 .nav-links {
-    gap: 3rem;
+    gap: 2rem;
     list-style: none;
     font-size: 1rem;
 }
@@ -64,7 +64,11 @@ a:hover {
     
 }
 
-
+a::before {
+    counter-increment: counting;
+    content: "0" counter(counting) ".";
+    color: rgb(221, 192, 29);
+}
 
 
 
@@ -183,12 +187,20 @@ section {
     padding-bottom: 1rem;
 }
 
-.title {
+.title1 {
+    font-family: Lato;
+    font-weight: 600;
+    font-size: 500%;
+    color: white;
+}
+
+.title2 {
     font-family: Lato;
     font-weight: 600;
     font-size: 300%;
     color: white;
 }
+
 
 .section__text__p2 {
     color: rgb(221, 192, 29);
