@@ -10,7 +10,8 @@
 body {
    font-family: "IBM Plex Mono", monospace;
    background-color: rgb(23, 25, 63);
-   counter-reset: counting;
+   
+   
 }
 
 html {
@@ -40,9 +41,11 @@ nav,
 }
 
 nav {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 17vh;
+    padding: 0 50px;
+    counter-reset: navigation;
 }
 
 .nav-links {
@@ -65,8 +68,8 @@ a:hover {
 }
 
 a::before {
-    counter-increment: counting;
-    content: "0" counter(counting) ".";
+    counter-increment: navigation;
+    content: "0" counter(navigation) ".";
     color: rgb(221, 192, 29);
 }
 
@@ -161,11 +164,13 @@ a::before {
 /* Sections */
 
 section {
-    padding-top: 15vh;
+    padding-top: 10vh;
+    padding-right: 350px;
     height: 96vh;
-    margin: 0 10 rem;
+    margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
+    counter-reset: section;
 }
 
 .section-container {
@@ -227,10 +232,48 @@ section {
 
 /* About Me */
 
-#aboutme {
+#about {
+    position: relative;
     display: flex;
     justify-content: center;
 }
+
+.about-pic {
+    border-radius: 2rem;
+}
+
+.title3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    align-items: center;
+    display: flex;
+}
+
+h3::before {
+    counter-increment: section;
+    content: "0" counter(section) ".";
+    color: rgb(221, 192, 29);
+}
+
+h3::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 2px;
+    margin-left: 20px;
+    background-color: rgb(221, 192, 29);
+}
+
+.section__text__p3 {
+    color: white;
+    line-height: 1.5;
+    max-width: 600px;
+    padding-top: 1rem;
+}
+
 
 .section__pic-container {
     display: flex;
