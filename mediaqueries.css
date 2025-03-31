@@ -6,3 +6,59 @@
         display: flex;
     }
 }
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+    .section-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .section__text__p3,
+    .title3 {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    .section__pic-container {
+      width: 80%;
+      margin: 2rem auto;
+    }
+    .title3::after{
+      width: 200px;
+    }
+    section{
+      margin: 0 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .title1 {
+      font-size: 400%;
+    }
+  
+    .title2 {
+      font-size: 200%;
+    }
+    .section__text__p2{
+      font-size: 90%;
+    }
+    #profile{
+      height: auto;
+    }
+  }
+  
+
+  @media (min-width: 768px) {
+    .projects-container {
+      grid-template-columns: repeat(2, 1fr);
+      /* Two columns on medium screens and up */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .projects-container {
+      grid-template-columns: repeat(3, 1fr);
+      /* Three columns on large screens */
+    }
+  }
