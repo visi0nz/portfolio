@@ -34,6 +34,14 @@ a,
     cursor: pointer;
 }
 
+.logo a img {
+    transform: scale(1); /* Initial size */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.logo a:hover img {
+    transform: scale(1.1); /* Scale up on hover */
+}
 
 /* Desktop Navigation */
 
