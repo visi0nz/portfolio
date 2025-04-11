@@ -9,17 +9,35 @@
 
 /* Media queries for responsiveness */
 @media screen and (max-width: 768px) {
+  #about .section-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+    }
+
     .section-container {
       flex-direction: column;
       align-items: center;
     }
-  
-    .section__text__p3,
-    .title3 {
-      padding-left: 2rem;
-      padding-right: 2rem;
+
+    .section__text-container {
+      width: 100%; /* Take up full width */
+      padding-left: 0; /* Remove padding */
     }
   
+    .section__text__p3 {
+      padding-left: 0;
+    }
+
+    .title3 {
+      padding-left: 0; /* Remove padding */
+      justify-content: center; /* Center the title */
+    }
+
+    .tech-list {
+    grid-template-columns: 1fr; /* Single column */
+    padding-left: 0;
+    }
     .section__pic-container {
       width: 80%;
       margin: 2rem auto;
@@ -29,6 +47,19 @@
     }
     section{
       margin: 0 2rem;
+    }
+    .section__text__p4 {
+      max-width: 90%; /* Wider text on mobile */
+      text-align: center; /* Center the text */
+      margin: 0 auto;  /* Center the paragraph */
+    }
+    
+    .project-card {
+      padding: 1.5rem; /* Reduce padding */
+    }
+
+    #contact {
+      padding-top: 10vh; /* Adjust padding */
     }
   }
   

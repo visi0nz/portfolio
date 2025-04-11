@@ -207,6 +207,7 @@ section {
 /* Profile Section */
 
 #profile {
+
     display: flex;
     justify-content: center;
     gap: 5rem;
@@ -256,11 +257,21 @@ section {
     height: 2rem;
 }
 
+i {
+    color: white;
+    font-size: 200%;
+    cursor: pointer;
+}
+
+i:hover {
+    color:rgb(221, 192, 29);
+}
 
 
 /* About Me */
 
 #about {
+  
     position: relative;
     justify-content: center;
     padding-top: 28vh;
@@ -271,6 +282,12 @@ section {
     width: 80%;
     max-width: 80%; /* Make image responsive */
     height: auto;
+    transition: filter 0.3s ease-in-out; /* Smooth transition for filter */
+    filter: sepia(100%) hue-rotate(40deg) saturate(200%); /* Default yellow-ish tone */
+}
+
+.section__pic-container:hover .about-pic {
+    filter: none; /* Revert to original on hover */
 }
 
 .title3 {
@@ -285,8 +302,8 @@ section {
 }
 
 .title3::before {
-    counter-increment: section;
-    content: "0" counter(section) ". ";
+    counter-increment: sections;
+    content: "0" counter(sections) ". ";
     color: rgb(221, 192, 29);
     margin-right: 1rem; /* Added margin-right to the counter */
     display: inline-block; /* Ensure the counter doesn't affect the title's line height */
@@ -359,7 +376,7 @@ section {
 #projects {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    counter-increment: section;
+    counter-increment: sections;
   }
   
   #projects .title3 {
@@ -438,23 +455,6 @@ section {
     transition: color 0.2s ease;
   }
   
-  .project-link:hover {
-    color: rgb(221, 192, 29);
-  }
-  
-  .project-github-link {
-    margin-top: 1rem;
-    color: white;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.2s ease;
-  }
-  
-  .project-github-link:hover {
-    color: rgb(221, 192, 29);
-  }
   
   .project-image {
     width: 100%;
@@ -464,3 +464,66 @@ section {
     margin-bottom: 1.5rem;
   }
   
+  /* Contact */
+
+  #contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40vh; /* Adjust as needed */
+    padding-bottom: 10vh;
+    min-height: 80vh; /* Ensure it takes up enough height */
+}
+
+.title4 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    display: flex;             /* Use flexbox */
+    align-items: center;       /* Vertically align items */
+    justify-content: center;  /* Horizontally center items */
+    padding-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.title4::before {
+    counter-increment: sections; /* Increment the section counter */
+    content: "0" counter(sections) ". "; /* Add counter text */
+    color: rgb(221, 192, 29);  /* Yellow color */
+    margin-right: 1rem;        /* Spacing between counter and title */
+    display: inline-block;
+}
+
+.section__text__p4 {
+    color: white;
+    font-family: Lato;
+    font-size: 110%;
+    line-height: 1.5;
+    max-width: 80%;
+    padding-top: 1rem;
+    text-align: center; /* Add this line to center the text */
+    margin: 0 auto; /* Add this to center the element horizontally */
+}
+
+
+.contact-details {
+    text-align: center;
+}
+
+.email-link {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    background-color: transparent; /* Adjust as needed */
+    color: rgb(221, 192, 29);
+    border: 2px solid rgb(221, 192, 29);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.email-link:hover {
+    background-color: rgb(221, 192, 29);
+    color: rgb(23, 25, 63);
+}

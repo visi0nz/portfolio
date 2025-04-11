@@ -22,3 +22,6 @@ function toggleMenu() {
     lastScrollY = currentScrollY;
   });
 
+// Icons
+
+<script src="https://kit.fontawesome.com/d2c76cf080.js" crossorigin="anonymous"></script>

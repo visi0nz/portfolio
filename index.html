@@ -6,6 +6,7 @@
     <title>Emre Civas - Webdevelopment</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <script src="https://kit.fontawesome.com/d2c76cf080.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <nav id="desktop-nav">
@@ -60,18 +61,18 @@
             </p>
 
             <div id="socials-container">
-                <img 
-                src="./assets/linkedin.png" 
-                alt="My LinkedIn profile"
-                class="icon" 
-                onclick="location.href='https://www.linkedin.com/in/emre-civas/'"
-                />
-                <img 
-                src="./assets/github.png" 
-                alt="My Github profile"
-                class="icon" 
-                onclick="location.href='https://github.com/visi0nz'"
-                />
+                <a href="https://www.linkedin.com/in/emre-civas/" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin" 
+                        alt="My Linkedin profile"></i>
+                </a>
+                <a href="https://github.com/visi0nz" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" 
+                        alt="My Github profile"></i>
+                </a>
             </div>
         </div>
     </section>
@@ -89,7 +90,7 @@
                 Furtwangen University (Germany). 
                 </p>
                 <p class="section__text__p3">
-                I'm a passionate webdeveloper and media designer.
+                I'm a passionate web developer and media designer.
                 I have experience in HTML, CSS and Javascript 
                 to build exceptional websites. 
                 </p>
@@ -136,7 +137,7 @@
         <div class="projects-container">
             <div class="project-card">
                 <img src="/assets/project1.png" alt="Project 1" class="project-image">
-                <h3>Corporate Design: Healthcare</h3>
+                <h3>Corporate Design: Healthcare Business</h3>
                 <p>Design: Logo, Business Card, Flyer & Responsive Website.
                 </p>
                 <div class="project-technologies">
@@ -146,7 +147,7 @@
             </div>
             <div class="project-card">
                 <img src="/assets/project2.png" alt="Project 2" class="project-image">
-                <h3>Corporate Design: Food</h3>
+                <h3>Corporate Design: Food Business</h3>
                 <p>Design: Logo, Store Window, T-Shirt & Sticker.</p>
                 <p>Photo shoot for high quality product pictures.</p>
                 <div class="project-technologies">
@@ -155,18 +156,21 @@
             </div>
             <div class="project-card">
                 <img src="/assets/about-pic.png" alt="Project 3" class="project-image">
-                <h3>My Portfolio</h3>
-                <p>My personal Portfolio coded by me.</p>
+                <h3>My Portfolio Website</h3>
+                <p>My personal Portfolio Website coded by me.</p>
                 <div class="project-technologies">
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>Javascript</span>
                 </div>
-                <a href="#profile" class="project-link">
-                    <img src="./assets/logo.png" alt="GitHub Logo" style="width: 30px; height: 30px;">
-                </a>
-                <a href="https://github.com/visi0nz" class="project-github-link" target="_blank">
-                    <img src="./assets/github.png" alt="GitHub Logo" style="width: 30px; height: 30px; ">
+                <i class="fa-solid fa-house"
+                    alt="My Personal Portfolio" 
+                    onclick="location.href='#profile'"></i>
+                <a href="https://github.com/visi0nz/portfolio" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" 
+                    alt="My Github profile"></i>
                 </a>
             </div>
 
@@ -179,11 +183,11 @@
                     <span>CSS</span>
                     <span>Javascript</span>
                 </div>
-                <a href="#" class="project-link">
-                    <img src="./assets/github.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
-                </a>
-                <a href="#" class="project-github-link">
-                    <img src="./assets/github.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
+                <a href="https://github.com/visi0nz" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" 
+                        alt="My Github profile"></i>
                 </a>
             </div>
 
@@ -196,11 +200,11 @@
                     <span>CSS</span>
                     <span>Javascript</span>
                 </div>
-                <a href="#" class="project-link">
-                    <img src="./assets/github.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
-                </a>
-                <a href="#" class="project-github-link">
-                    <img src="./assets/github.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
+                <a href="https://github.com/visi0nz" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" 
+                        alt="My Github profile"></i>
                 </a>
             </div>
 
@@ -213,11 +217,11 @@
                     <span>CSS</span>
                     <span>Javascript</span>
                 </div>
-                <a href="#" class="project-link">
-                    <img src="./assets/github.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
-                </a>
-                <a href="#" class="project-github-link">
-                    <img src="./assets/github.png" alt="GitHub Logo" style="width: 20px; height: 20px;">
+                <a href="https://github.com/visi0nz" 
+                    target="_blank" 
+                    rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" 
+                        alt="My Github profile"></i>
                 </a>
             </div>
 
@@ -225,7 +229,23 @@
         </div>
     </section>
 
+
+    <section id="contact">
+        <div class="section-container">
+            <div class="contact-details">
+                <h2 class="title4">Contact Me</h2>
+                <p class="section__text__p4">
+                    I'm always interested in hearing about new projects, 
+                    opportunities, or just to connect.
+                    Feel free to reach out!
+               <p><a href="mailto:civas.em@gmail.com" class="email-link">
+                    E-mail me
+                </a></p> 
+            </div>
+        </div>
     </section>
+
+
 
   <script src="script.js"></script>  
 </body>
