@@ -10,8 +10,6 @@
 body {
    font-family: "IBM Plex Mono", monospace;
    background-color: rgb(23, 25, 63);
-   
-   
 }
 
 html {
@@ -185,7 +183,7 @@ a {
 
 /* Sections */
 
-section {
+.profilefirst {
     padding-top: 18vh;
     padding-right: 350px;
     height: 96vh;
@@ -194,6 +192,23 @@ section {
     min-height: fit-content;
     counter-reset: section;
 }
+
+section {
+    padding-top: 18vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    counter-reset: section;
+}
+
+.center-section-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Ensure content is stacked vertically */
+}
+
 
 .section-container {
     display: flex;
@@ -271,10 +286,9 @@ i:hover {
 /* About Me */
 
 #about {
-  
     position: relative;
-    justify-content: center;
     padding-top: 28vh;
+    width: 70%;
 }
 
 .about-pic {
@@ -297,8 +311,8 @@ i:hover {
     position: relative;
     align-items: center;
     display: flex;
-    padding-left: 10rem;
     padding-top: 2rem;
+    padding-left: 10rem;
 }
 
 .title3::before {
@@ -379,13 +393,40 @@ i:hover {
     counter-increment: sections;
   }
   
-  #projects .title3 {
-    color: white;
-    /* Light text for headings */
-    text-align: center;
+  .title5 {
+    font-weight: 600;
     font-size: 1.5rem;
-    margin-bottom: 4rem;
-  }
+    color: white;
+    position: relative;
+    align-items: center;
+    display: flex;
+    padding-top: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    }
+
+.title5::before {
+    counter-increment: sections;
+    content: "0" counter(sections) ". ";
+    color: rgb(221, 192, 29);
+    margin-right: 1rem; /* Added margin-right to the counter */
+    display: inline-block; /* Ensure the counter doesn't affect the title's line height */
+    }
+
+.title5::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 450px;
+    height: 2px;
+    margin-left: 20px;
+    background-color: rgb(221, 192, 29);
+    }
+
+
+
+
+
   
   .projects-container {
     display: grid;
@@ -508,6 +549,7 @@ i:hover {
 
 .contact-details {
     text-align: center;
+    
 }
 
 .email-link {
@@ -527,3 +569,19 @@ i:hover {
     background-color: rgb(221, 192, 29);
     color: rgb(23, 25, 63);
 }
+
+
+ /* Footer */
+
+ .footerlinks {
+    font-size: 80%;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+ }
+
+ .footerlinks a:hover{
+    color: rgb(221, 192, 29);
+ }
+
