@@ -288,13 +288,14 @@ i:hover {
 #about {
     position: relative;
     padding-top: 28vh;
-    width: 70%;
+    width: 85%;
+    padding-left: 10rem;
 }
 
 .about-pic {
     border-radius: 2rem;
-    width: 80%;
-    max-width: 80%; /* Make image responsive */
+    width: 55%;
+    max-width: 55%; /* Make image responsive */
     height: auto;
     transition: filter 0.3s ease-in-out; /* Smooth transition for filter */
     filter: sepia(100%) hue-rotate(40deg) saturate(200%); /* Default yellow-ish tone */
@@ -334,7 +335,7 @@ i:hover {
 }
 
 .section__text-container {
-    width: 90%;
+    width: 60%;
 }
 
 
@@ -346,6 +347,7 @@ i:hover {
     max-width: 100%;
     padding-top: 1rem;
     padding-left: 10rem;
+    margin-top: 0.5rem;
 }
 
 .tech-list li::before {
@@ -378,8 +380,10 @@ i:hover {
     height: auto;
     width: 50%;
     height: 50%;
-    padding-top: 3rem;
+    padding-top: 1rem;
     padding-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
 }
 
 
