@@ -346,7 +346,6 @@ i:hover {
     max-width: 100%;
     padding-top: 1rem;
     padding-left: 10rem;
-    
 }
 
 .tech-list li::before {
@@ -388,8 +387,7 @@ i:hover {
 /* Projects */
 
 #projects {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    margin-top: 4rem;
     counter-increment: sections;
   }
   
@@ -422,8 +420,6 @@ i:hover {
     margin-left: 20px;
     background-color: rgb(221, 192, 29);
     }
-
-
 
 
 
@@ -511,8 +507,7 @@ i:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 40vh; /* Adjust as needed */
-    padding-bottom: 10vh;
+    margin-top: 10rem;
     min-height: 80vh; /* Ensure it takes up enough height */
 }
 
@@ -578,10 +573,42 @@ i:hover {
     display: flex;
     gap: 2rem;
     justify-content: center;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
  }
 
  .footerlinks a:hover{
     color: rgb(221, 192, 29);
  }
 
+
+ /* Impressum */
+
+ .title6 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    }
+ 
+.title6::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 450px;
+    height: 2px;
+    margin-left: 20px;
+    background-color: rgb(221, 192, 29);
+    }
+
+.section__text__p5 {
+    color: white;
+    font-family: Lato;
+    font-size: 110%;
+    line-height: 1.5;
+    max-width: 100%;
+    padding-top: 1.5rem;
+}
