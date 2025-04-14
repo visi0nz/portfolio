@@ -68,7 +68,7 @@ nav,
 }
 
 nav {
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     height: 10vh;
     padding: 0 50px;
@@ -83,6 +83,13 @@ nav {
     transition: transform 0.3s ease-in-out; /* Smooth transition for show/hide */
     transform: translateY(0); /* Initially visible */
 }
+
+.nav-right { 
+    display: flex;
+    align-items: center;
+    gap: 2rem; 
+}
+
 
 nav.hidden {
     transform: translateY(-100%); /* Hide the navbar */
@@ -112,6 +119,26 @@ a {
     text-underline-offset: 0.7rem;
 }
 
+
+/* Language Button */
+
+.language-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem; /* Adjust as needed */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.lang-btn:hover {
+    color: rgb(221, 192, 29);
+}
 
 
 /* Hamburger Menu*/
