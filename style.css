@@ -138,6 +138,7 @@ a {
 
 .lang-btn:hover {
     color: rgb(221, 192, 29);
+    transform: translateY(-0.1rem);
 }
 
 
