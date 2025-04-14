@@ -572,6 +572,14 @@ i:hover {
 
  /* Footer */
 
+ .section__text__p7 {
+    display: flex;
+    justify-content: center;
+    font-size: 80%;
+    color: rgb(221, 192, 29);
+    padding-bottom: 1rem;
+}
+
  .footerlinks {
     font-size: 80%;
     display: flex;
@@ -585,7 +593,16 @@ i:hover {
  }
 
 
- /* Impressum */
+ /* Impressum & Datenschutz */
+
+ .impressdat {
+    padding-top: 5vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    counter-reset: section;
+}
 
  .title6 {
     font-weight: 600;
