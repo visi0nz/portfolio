@@ -7,9 +7,24 @@
     padding: 0;
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-   font-family: "IBM Plex Mono", monospace;
-   background-color: rgb(23, 25, 63);
+    position: relative;
+    font-family: "IBM Plex Mono", monospace;
+    background-color: rgb(23, 25, 63);
+    display: flex; /* Enable flexbox for the body */
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body is at least the height of the viewport */
+    box-sizing: border-box;  /* Include padding in body's total height */
+}
+
+main {
+    flex: 1; /* Erlaube dem main-Element zu wachsen und den verfügbaren Platz einzunehmen */
 }
 
 html {
@@ -22,9 +37,13 @@ p {
 
 /* Transition */
 
-a, 
+a,
 .btn {
     transition: all 300ms ease;
+}
+
+a:hover {
+   color: rgb(221, 192, 29);
 }
 
 /* Logo */
@@ -43,7 +62,7 @@ a,
 
 /* Desktop Navigation */
 
-nav, 
+nav,
 .nav-links {
     display: flex;
 }
@@ -84,7 +103,7 @@ nav.hidden {
 a {
     color: white;
     text-decoration: none;
-    
+
 }
 
 .nav-links a:hover {
@@ -203,6 +222,7 @@ section {
 }
 
 .center-section-content {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -214,6 +234,7 @@ section {
     display: flex;
     gap: 2rem;
     height: auto;
+    margin: 0 auto;
     flex-direction: row; /* Added for responsiveness */
     align-items: center; /* Vertically center items */
 }
@@ -351,10 +372,10 @@ i:hover {
 }
 
 .tech-list li::before {
-    content: "▹"; 
-    color: rgb(221, 192, 29); 
+    content: "▹";
+    color: rgb(221, 192, 29);
     position: absolute;
-    left: -1rem; 
+    left: -1rem;
 }
 
 
@@ -368,7 +389,7 @@ i:hover {
 }
 
 .tech-list li {
-    padding-left: 0.5rem; 
+    padding-left: 0.5rem;
     position: relative;
     display: flex;
     align-items: baseline;
@@ -393,8 +414,9 @@ i:hover {
 #projects {
     margin-top: 4rem;
     counter-increment: sections;
+    margin-bottom: 11rem; /* Abstand unterhalb des Projektbereichs */
   }
-  
+
   .title5 {
     font-weight: 600;
     font-size: 1.5rem;
@@ -426,8 +448,6 @@ i:hover {
     }
 
 
-
-  
   .projects-container {
     display: grid;
     grid-template-columns: 1fr;
@@ -438,8 +458,8 @@ i:hover {
     margin: 0 auto;
     /* Center the container */
   }
-  
-  
+
+
   .project-card {
     background-color: rgba(255, 255, 255, 0.05);
     /* glassmorphism effect - more subtle*/
@@ -450,34 +470,34 @@ i:hover {
     /* Smooth transition */
     border: 1px solid rgb(221, 192, 29, 0.6);
   }
-  
+
   .project-card:hover {
     transform: translateY(-0.5rem);
     /* Slight lift on hover */
     box-shadow: 0 12px 35px -15px rgba(0, 0, 0, 0.3);
   }
-  
+
   .project-card h3 {
     color: white;
     font-family: Lato;
     font-size: 1.3rem;
     margin-bottom: 0.5rem;
   }
-  
+
   .project-card p {
     color: white;
     font-family: Lato;
     line-height: 1.5;
     margin-bottom: 1rem;
   }
-  
+
   .project-technologies {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
     margin-bottom: 1.5rem;
   }
-  
+
   .project-technologies span {
     background-color: rgba(255, 255, 255, 0.1);
     color: rgb(221, 192, 29);
@@ -486,7 +506,7 @@ i:hover {
     font-size: 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
   }
-  
+
   .project-link {
     color: white;
     text-decoration: none;
@@ -495,8 +515,8 @@ i:hover {
     gap: 0.5rem;
     transition: color 0.2s ease;
   }
-  
-  
+
+
   .project-image {
     width: 100%;
     border-radius: 0.75rem;
@@ -504,7 +524,7 @@ i:hover {
     aspect-ratio: 16/9;
     margin-bottom: 1.5rem;
   }
-  
+
   /* Contact */
 
   #contact {
@@ -548,7 +568,7 @@ i:hover {
 
 .contact-details {
     text-align: center;
-    
+
 }
 
 .email-link {
@@ -571,6 +591,14 @@ i:hover {
 
 
  /* Footer */
+
+ footer {
+    width: 100%;
+    padding: 2rem 0;
+    text-align: center;
+    background-color: rgb(23, 25, 63);
+}
+
 
  .section__text__p7 {
     display: flex;
@@ -604,6 +632,15 @@ i:hover {
     counter-reset: section;
 }
 
+.datenschutz-content {
+    color: white;
+    line-height: 1.5;
+    max-width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    padding-bottom: 100px;  /* Add padding at the bottom */
+}
+
  .title6 {
     font-weight: 600;
     font-size: 1.5rem;
@@ -614,7 +651,7 @@ i:hover {
     justify-content: center;
     margin-bottom: 2rem;
     }
- 
+
 .title6::after {
     content: "";
     display: block;
@@ -625,11 +662,22 @@ i:hover {
     background-color: rgb(221, 192, 29);
     }
 
+.title7 {
+    font-weight: 600;
+    font-family: Lato;
+    font-size: 1.2rem;
+    color: white;
+    position: relative;
+    align-items: center;
+    display: flex;
+    margin-top: 2rem;
+}
+
 .section__text__p5 {
     color: white;
     font-family: Lato;
-    font-size: 110%;
+    font-size: 80%;
     line-height: 1.5;
     max-width: 100%;
-    padding-top: 1.5rem;
+    padding-top: 1rem;
 }
