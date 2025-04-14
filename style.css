@@ -625,11 +625,11 @@ i:hover {
 
  .impressdat {
     padding-top: 5vh;
-    height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
-    min-height: fit-content;
-    counter-reset: section;
+    flex: 1; /* Allow this section to grow and take up available space */
+    min-height: auto; /* Ensure it doesn't force unnecessary height */
+    height: auto; /* Remove any fixed height */
 }
 
 .datenschutz-content {
