@@ -8,6 +8,7 @@
 }
 
 html, body {
+    font-size: 16px;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -62,12 +63,8 @@ a:hover {
 
 /* Desktop Navigation */
 
-nav,
-.nav-links {
-    display: flex;
-}
-
 nav {
+    display: flex;
     justify-content: space-between; 
     align-items: center;
     height: 10vh;
@@ -99,6 +96,7 @@ nav.hidden {
     gap: 2rem;
     list-style: none;
     font-size: 1rem;
+    display: none;
 }
 
 .nav-links a::before {
@@ -118,6 +116,7 @@ a {
     text-decoration: underline;
     text-underline-offset: 0.7rem;
 }
+
 
 
 /* Language Button */
@@ -150,7 +149,7 @@ a {
 
 .hamburger-menu {
     position: relative;
-    display: inline-block;
+    display: block;
 }
 
 .hamburger-icon {
@@ -344,8 +343,9 @@ i:hover {
 .about-pic {
     border-radius: 2rem;
     width: 55%;
-    max-width: 55%; /* Make image responsive */
+    max-width: 100%; /* Make image responsive */
     height: auto;
+    display: block;
     transition: filter 0.3s ease-in-out; /* Smooth transition for filter */
     filter: sepia(100%) hue-rotate(40deg) saturate(200%); /* Default yellow-ish tone */
 }
@@ -385,6 +385,10 @@ i:hover {
 
 .section__text-container {
     width: 60%;
+}
+
+.section__text-container, .section__pic-container {
+    flex: 1 1 100%; /* Full width on small screens */
 }
 
 

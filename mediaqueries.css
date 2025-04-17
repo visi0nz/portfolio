@@ -81,17 +81,32 @@
   
 
   @media (min-width: 768px) {
+
+    .nav-links {
+      display: flex; /* Show desktop navigation */
+    }
+
+    .hamburger-menu {
+      display: none; /* Hide hamburger menu */
+    }
+
     .projects-container {
       grid-template-columns: repeat(2, 1fr);
       /* Two columns on medium screens and up */
     }
+
+    .section__text-container, .section__pic-container {
+      flex: 1 1 50%; /* Split into two columns on larger screens */
+    }
   }
   
   @media (min-width: 1024px) {
+
     .projects-container {
       grid-template-columns: repeat(3, 1fr);
       /* Three columns on large screens */
     }
+    
   }
 
  
