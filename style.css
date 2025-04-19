@@ -361,11 +361,33 @@ img {
 }
 
 
-.section__pic-container img {
-    border-radius: 2rem;
+.section__pic-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    max-width: 55%;
+    padding-top: 1rem;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    justify-content: center; /* Center the image horizontally */
+    transition: transform 0.3s ease-in-out; /* Smooth scaling transition */
+}
+
+.section__pic-container:hover .about-pic {
+    filter: none; /* Revert to original on hover */
+    transform: scale(1.05); /* Slightly scale up the container on hover */
+}
+
+
+.about-pic {
+    border-radius: 1rem;
     width: 80%;
-    transition: filter 0.3s ease-in-out; /* Smooth transition for filter */
     filter: sepia(100%) hue-rotate(40deg) saturate(200%); /* Default yellow-ish tone */
+    object-fit: cover; /* Ensure the image covers the container */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out; /* Smooth transition for scaling and filter */
+    
 }
 
 
@@ -380,22 +402,8 @@ img {
     text-align: left; /* Align text to the left */
 }
 
-.section__pic-container {
-    display: flex;
-    height: auto;
-    max-width: 55%;
-    padding-top: 1rem;
-    padding-right: 0;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    justify-content: center; /* Center the image horizontally */
-}
 
 
-
-.section__pic-container:hover .about-pic {
-    filter: none; /* Revert to original on hover */
-}
 
 .title3 {
     font-weight: 600;
