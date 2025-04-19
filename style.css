@@ -232,6 +232,7 @@ a {
 .profilefirst {
     padding-top: 18vh;
     padding-right: 350px;
+    padding: 4rem 2rem; /* Add padding inside each section */
     height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
@@ -264,6 +265,8 @@ section {
     margin: 0 auto;
     flex-direction: row; /* Added for responsiveness */
     align-items: center; /* Vertically center items */
+    flex-wrap: nowrap; /* Verhindert, dass die Inhalte umbrechen */
+    justify-content: space-between;
 }
 
 
@@ -275,6 +278,7 @@ section {
     justify-content: center;
     gap: 5rem;
     height: 80vh;
+    padding-right: 25rem;
 }
 
 .section__text__p1 {
@@ -331,24 +335,63 @@ i:hover {
 }
 
 
-/* About Me */
+/* About Section */
 
 #about {
     position: relative;
     padding-top: 28vh;
     width: 85%;
     padding-left: 10rem;
+    margin-bottom: 4rem; /* Add space below the "About" section */
+
+    flex-wrap: nowrap; /* Prevent wrapping on desktop */
+    display: flex;
+    justify-content: space-between; /* Add space between text and image */
+    margin: 0 auto; /* Center the section horizontally */
+    align-items: center;
+    gap: 2rem;
+    
+    
 }
 
-.about-pic {
+
+img {
+    max-width: 100%; /* Prevent images from overflowing their containers */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove inline spacing issues */
+}
+
+
+.section__pic-container img {
     border-radius: 2rem;
-    width: 55%;
-    max-width: 100%; /* Make image responsive */
-    height: auto;
-    display: block;
+    width: 50%;
     transition: filter 0.3s ease-in-out; /* Smooth transition for filter */
     filter: sepia(100%) hue-rotate(40deg) saturate(200%); /* Default yellow-ish tone */
 }
+
+
+
+.section__text-container, .section__pic-container {
+    flex: 1; /* Full width on small screens */
+    text-align: center; /* Center text for smaller screens */
+}
+
+.section__text-container {
+    max-width: 50%;
+    text-align: left; /* Align text to the left */
+}
+
+.section__pic-container {
+    display: flex;
+    height: auto;
+    max-width: 50%;
+    padding-top: 1rem;
+    padding-right: 0;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+}
+
+
 
 .section__pic-container:hover .about-pic {
     filter: none; /* Revert to original on hover */
@@ -361,8 +404,13 @@ i:hover {
     position: relative;
     align-items: center;
     display: flex;
-    padding-top: 2rem;
-    padding-left: 10rem;
+    padding-left: 10rem; /* Gleiche Padding-Werte wie der Textcontainer */
+    margin: 0 auto; /* Zentriere die Überschrift */
+    text-align: left; /* Stelle sicher, dass der Text linksbündig ist */
+    width: 100%; /* Überschrift nimmt die volle Breite ein */
+    max-width: 1200px; /* Begrenze die Breite */
+    margin-left: auto; /* Zentriere den Inhalt horizontal */
+    margin-right: auto; /* Zentriere den Inhalt horizontal */
 }
 
 .title3::before {
@@ -383,9 +431,7 @@ i:hover {
     background-color: rgb(221, 192, 29);
 }
 
-.section__text-container {
-    width: 60%;
-}
+
 
 .section__text-container, .section__pic-container {
     flex: 1 1 100%; /* Full width on small screens */
@@ -428,16 +474,7 @@ i:hover {
     color: white;
 }
 
-.section__pic-container {
-    display: flex;
-    height: auto;
-    width: 50%;
-    height: 50%;
-    padding-top: 1rem;
-    padding-right: 0;
-    margin-bottom: 2rem;
-    margin-left: 1rem;
-}
+
 
 
 
@@ -445,9 +482,10 @@ i:hover {
 
 #projects {
     margin-top: 4rem;
+    padding-left: 10rem; /* Gleiche Padding-Werte wie die Überschrift */
+    padding-right: 10rem; /* Optional: Rechts-Padding für Symmetrie */
     counter-increment: sections;
-    margin-bottom: 11rem; /* Abstand unterhalb des Projektbereichs */
-  }
+}
 
   .title5 {
     font-weight: 600;
@@ -457,8 +495,11 @@ i:hover {
     align-items: center;
     display: flex;
     padding-top: 2rem;
-    justify-content: center;
     margin-bottom: 2rem;
+    text-align: left;
+    padding-left: 10rem;
+    width: 100%; /* Überschrift nimmt die volle Breite ein */
+    max-width: 1200px; /* Begrenze die Breite */
     }
 
 .title5::before {
@@ -482,24 +523,19 @@ i:hover {
 
   .projects-container {
     display: grid;
-    grid-template-columns: 1fr;
-    /* Start with one column on small screens */
+    grid-template-columns: 1fr; /* Start with one column on small screens */
     gap: 2rem;
-    max-width: 1000px;
-    /* max width */
-    margin: 0 auto;
-    /* Center the container */
+    max-width: 1000px; /* max width */
+    margin: 0 auto; /* Center the container */
   }
 
 
   .project-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    /* glassmorphism effect - more subtle*/
+    background-color: rgba(255, 255, 255, 0.05); /* glassmorphism effect - more subtle*/
     border-radius: 1rem;
     padding: 2rem;
     box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Smooth transition */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
     border: 1px solid rgb(221, 192, 29, 0.6);
   }
 
