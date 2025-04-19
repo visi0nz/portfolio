@@ -612,9 +612,10 @@ img {
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
-    margin-top: 15rem; /* Add space above the Contact Me section */
+    margin-top: 25rem; /* Add space above the Contact Me section */
     min-height: 80vh; /* Ensure it takes up enough height */
     padding: 2rem 1rem; /* Add padding for spacing */
+    box-sizing: border-box; /* Padding wird in die Höhe/Breite einbezogen */
 }
 
 .title4 {

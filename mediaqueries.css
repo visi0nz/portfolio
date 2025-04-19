@@ -39,6 +39,8 @@
       align-items: center;
       min-height: 80vh;
       padding: 2rem 1rem;
+      padding-top: 10vh; /* Adjust padding */
+      margin-top: 2rem;
     }
 
     footer {
@@ -133,6 +135,9 @@
   /* -----------------------------------------*/
 
   /* Projects Section */
+  #projects {
+    margin-bottom: 2rem;
+  }
   .projects-container {
     grid-template-columns: 1fr; /* Single column on small screens */
     gap: 1.5rem; /* Add spacing between project cards */
@@ -242,9 +247,6 @@
     }
 
 
-    #contact {
-      padding-top: 10vh; /* Adjust padding */
-    }
   }
   
   @media screen and (max-width: 480px) {
