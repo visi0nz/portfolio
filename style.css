@@ -12,6 +12,8 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
 }
 
 body {
@@ -26,6 +28,8 @@ body {
 
 main {
     flex: 1; /* Erlaube dem main-Element zu wachsen und den verfügbaren Platz einzunehmen */
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
 }
 
 html {
@@ -482,6 +486,7 @@ img {
 
 #projects {
     margin-top: 4rem;
+    margin-bottom: 4rem; /* Add space below the Projects section */
     padding-left: 10rem; /* Gleiche Padding-Werte wie die Überschrift */
     padding-right: 10rem; /* Optional: Rechts-Padding für Symmetrie */
     counter-increment: sections;
@@ -587,20 +592,24 @@ img {
 
   .project-image {
     width: 100%;
+    height: auto; /* Maintain aspect ratio */
     border-radius: 0.75rem;
-    object-fit: cover;
+    object-fit: cover; /* Crop the image to fit the container */
     aspect-ratio: 16/9;
     margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
   }
 
   /* Contact */
 
-  #contact {
+#contact {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10rem;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    margin-top: 15rem; /* Add space above the Contact Me section */
     min-height: 80vh; /* Ensure it takes up enough height */
+    padding: 2rem 1rem; /* Add padding for spacing */
 }
 
 .title4 {
@@ -665,6 +674,7 @@ img {
     padding: 2rem 0;
     text-align: center;
     background-color: rgb(23, 25, 63);
+    margin-top: auto; /* Push the footer to the bottom */
 }
 
 

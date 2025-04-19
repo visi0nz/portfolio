@@ -7,14 +7,170 @@
     }
 }
 
-/* Media queries for responsiveness */
+
 @media screen and (max-width: 768px) {
-  #about .section-container {
-    flex-direction: column; /* Stack items vertically */
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
-    align-items: center; /* Center items */
-    text-align: center; /* Center text */
+ 
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
     }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    #contact {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      padding: 2rem 1rem;
+    }
+
+    footer {
+      width: 100%;
+      padding: 2rem 0;
+      text-align: center;
+      background-color: rgb(23, 25, 63);
+      margin-top: auto;
+    }
+
+
+  /* Navigation / Hamburger Menu ------------------------*/
+
+    nav {
+    display: flex;
+    justify-content: space-between; /* Space out logo and menu */
+    align-items: center;
+    padding: 0 1rem; /* Add padding for spacing */
+    }
+
+    .nav-links {
+      display: block; /* Show links in a vertical list */
+      text-align: center;
+    }
+
+    #hamburger-nav {
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 1rem;
+      position: relative; /* Ensure positioning context */
+      z-index: 100; /* Higher than other elements */
+    }
+
+    .hamburger-menu {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      z-index: 200; /* Ensure it's above the logo or other elements */
+    }
+
+    .hamburger-icon {
+        cursor: pointer;
+        width: 2rem; /* Adjust the size of the icon */
+        height: 2rem;
+    }
+
+    .hamburger-icon span {
+        display: block;
+        height: 0.25rem;
+        width: 100%;
+        background-color: white; /* Adjust color if needed */
+        margin: 0.3rem 0;
+    }
+
+    .logo {
+      display: flex;
+      justify-content: flex-start; /* Align logo to the left */
+      align-items: center; /* Center vertically */
+    }
+
+    .logo img {
+      width: 120px; /* Adjust the size of the logo */
+      height: auto; /* Maintain aspect ratio */
+    }
+
+    .logo a {
+      display: inline-block;
+      padding: 0.5rem; /* Adjust padding to reduce clickable area */
+    }
+  /* -----------------------------------------*/
+
+
+
+  /* Profile Section ------------------------*/
+    #profile {
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center align items */
+      padding: 2rem 1rem; /* Add padding for smaller screens */
+    }
+  /* -----------------------------------------*/
+
+  /* About Section ---------------------------*/
+    #about .section-container {
+      flex-direction: column; /* Stack items vertically */
+      flex-wrap: wrap; /* Allow wrapping on smaller screens */
+      align-items: center; /* Center items */
+      text-align: center; /* Center text */
+      padding: 2rem 1rem; /* Adjust padding */
+    }
+  /* -----------------------------------------*/
+
+  /* Projects Section */
+  .projects-container {
+    grid-template-columns: 1fr; /* Single column on small screens */
+    gap: 1.5rem; /* Add spacing between project cards */
+  }
+    
+  .project-card {
+    padding: 1rem; /* Reduce padding */
+  }
+
+  .project-image {
+    width: 100%; /* Ensure images scale properly */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Ensure the image scales properly on smaller screens */
+    max-height: 150px; /* Reduce the height for smaller screens */
+  }
+  /* -----------------------------------------*/
+
+
+    .section__text {
+      text-align: left; /* Center-align text for better readability */
+      width: 90%; /* Allow the text to take up more width */
+      max-width: 600px; /* Limit the maximum width */
+    }
+
+    .section__text__p1 {
+      font-size: 1.2rem; /* Adjust font size for smaller screens */
+      padding-top: 2rem; /* Add spacing above the text */
+    }
+
+    .title1 {
+      font-size: 2rem; /* Reduce the font size for smaller screens */
+    }
+
+    .title2 {
+      font-size: 1.5rem; /* Adjust the subtitle size */
+    }
+
+    .section__text__p2 {
+      font-size: 1rem; /* Adjust paragraph font size */
+      line-height: 1.5; /* Improve readability */
+    }
+
+    #socials-container {
+      margin-top: 1.5rem; /* Add spacing above social icons */
+      gap: 1rem; /* Add spacing between icons */
+    }
+
 
     .section-container {
       flex-direction: column;
@@ -25,6 +181,7 @@
 
     .section__text-container, .section__pic-container {
       max-width: 100%; /* Full width on smaller screens */
+      margin-bottom: 1rem; /* Add spacing between text and image */
     }
 
     .section__text-container {
@@ -51,25 +208,30 @@
     grid-template-columns: 1fr; /* Single column */
     padding-left: 0;
     }
+
     .section__pic-container {
       width: 80%;
       margin: 2rem auto;
     }
+
+    .section__pic-container img {
+      width: 90%; /* Scale image to fit the screen */
+    }
+
     .title3::after{
       width: 200px;
     }
+
     section{
       margin: 0 2rem;
     }
+
     .section__text__p4 {
       max-width: 90%; /* Wider text on mobile */
       text-align: center; /* Center the text */
       margin: 0 auto;  /* Center the paragraph */
     }
-    
-    .project-card {
-      padding: 1.5rem; /* Reduce padding */
-    }
+
 
     #contact {
       padding-top: 10vh; /* Adjust padding */
@@ -90,6 +252,18 @@
     #profile{
       height: auto;
     }
+
+    /* Footer */
+    footer {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .footerlinks {
+        flex-direction: column; /* Stack links vertically */
+        gap: 1rem; /* Add spacing between links */
+    }
+
   }
   
 
@@ -111,11 +285,9 @@
       flex: 1 1 50%; /* Split into two columns on larger screens */
     }
 
-    
-
-
-
   }
+
+
   
   @media (min-width: 1024px) {
 
