@@ -596,7 +596,7 @@ img {
 
 
   .project-image {
-    width: 100%;
+    width: auto;
     height: auto; /* Maintain aspect ratio */
     border-radius: 0.75rem;
     object-fit: cover; /* Crop the image to fit the container */
