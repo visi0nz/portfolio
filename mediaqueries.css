@@ -9,6 +9,14 @@
 
 
 @media screen and (max-width: 768px) {
+
+    h1, h2, h3 {
+      font-size: 2rem;
+    }
+
+    .section {
+      padding: 2rem 1rem; /* Adjust padding for mobile */
+   }
  
     html, body {
       height: 100%;
@@ -109,7 +117,8 @@
       display: flex;
       flex-direction: column; /* Stack content vertically */
       align-items: center; /* Center align items */
-      padding: 2rem 1rem; /* Add padding for smaller screens */
+      padding: 2rem 2rem; /* Add padding for smaller screens */
+      justify-content: center; /* Center the section on mobile */
     }
   /* -----------------------------------------*/
 
@@ -181,7 +190,7 @@
 
     .section__text-container, .section__pic-container {
       max-width: 100%; /* Full width on smaller screens */
-      margin-bottom: 1rem; /* Add spacing between text and image */
+      margin-bottom: 2rem; /* Add spacing between text and image */
     }
 
     .section__text-container {
@@ -286,6 +295,17 @@
     }
 
   }
+
+      /* Medium screens (tablets) */
+      @media screen and (min-width: 768px) and (max-width: 1023px) {
+        /* Adjustments for tablets */
+        #about .section-container {
+            flex-direction: row;
+        }
+        .projects-container {
+            grid-template-columns: repeat(2, 1fr); /* Two columns */
+        }
+    }
 
 
   

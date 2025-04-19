@@ -37,7 +37,8 @@ html {
 }
 
 p {
-    color: rgb(85, 85, 85)
+    font-size: 1rem; /* Use rem */
+    line-height: 1.6;
 }
 
 /* Transition */
@@ -233,24 +234,17 @@ a {
 
 /* Sections */
 
-.profilefirst {
-    padding-top: 18vh;
-    padding-right: 350px;
-    padding: 4rem 2rem; /* Add padding inside each section */
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
-    counter-reset: section;
-}
-
 section {
-    padding-top: 18vh;
+
     height: 96vh;
-    margin: 0 10rem;
+    
     box-sizing: border-box;
     min-height: fit-content;
     counter-reset: section;
+
+    max-width: 1200px; /* Limit section width */
+    margin: 0 auto; /* Center the section */
+    padding: 4rem 2rem; /* Consistent section padding */
 }
 
 .center-section-content {
@@ -277,12 +271,16 @@ section {
 /* Profile Section */
 
 #profile {
-
     display: flex;
-    justify-content: center;
     gap: 5rem;
+    padding-top: 10rem;
+    padding-left: 15rem;
     height: 80vh;
-    padding-right: 25rem;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+    counter-reset: section;
+    align-items: center;
 }
 
 .section__text__p1 {
@@ -343,18 +341,15 @@ i:hover {
 
 #about {
     position: relative;
-    padding-top: 28vh;
-    width: 85%;
-    padding-left: 10rem;
-    margin-bottom: 4rem; /* Add space below the "About" section */
-
+    width: 100%;
+    padding: 4rem 2rem;
+    margin: 0 auto; /* Center the section horizontally */
+    max-width: 1200px; /* Increase the maximum width */
     flex-wrap: nowrap; /* Prevent wrapping on desktop */
     display: flex;
     justify-content: space-between; /* Add space between text and image */
-    margin: 0 auto; /* Center the section horizontally */
     align-items: center;
     gap: 2rem;
-    
     
 }
 
@@ -368,7 +363,7 @@ img {
 
 .section__pic-container img {
     border-radius: 2rem;
-    width: 50%;
+    width: 80%;
     transition: filter 0.3s ease-in-out; /* Smooth transition for filter */
     filter: sepia(100%) hue-rotate(40deg) saturate(200%); /* Default yellow-ish tone */
 }
@@ -381,18 +376,19 @@ img {
 }
 
 .section__text-container {
-    max-width: 50%;
+    max-width: 60%;
     text-align: left; /* Align text to the left */
 }
 
 .section__pic-container {
     display: flex;
     height: auto;
-    max-width: 50%;
+    max-width: 55%;
     padding-top: 1rem;
     padding-right: 0;
     margin-bottom: 2rem;
     margin-left: 2rem;
+    justify-content: center; /* Center the image horizontally */
 }
 
 
@@ -487,8 +483,9 @@ img {
 #projects {
     margin-top: 4rem;
     margin-bottom: 4rem; /* Add space below the Projects section */
-    padding-left: 10rem; /* Gleiche Padding-Werte wie die Überschrift */
-    padding-right: 10rem; /* Optional: Rechts-Padding für Symmetrie */
+    padding: 4rem 2rem;
+    max-width: 1200px; /* Match the max-width of #about */
+    margin: 0 auto; /* Center the section horizontally */
     counter-increment: sections;
 }
 
@@ -499,10 +496,10 @@ img {
     position: relative;
     align-items: center;
     display: flex;
+    padding-left: 10rem; /* Match the padding-left of .title3 */
     padding-top: 2rem;
     margin-bottom: 2rem;
     text-align: left;
-    padding-left: 10rem;
     width: 100%; /* Überschrift nimmt die volle Breite ein */
     max-width: 1200px; /* Begrenze die Breite */
     }
