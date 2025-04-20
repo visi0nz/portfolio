@@ -1,322 +1,148 @@
-@media screen and (max-width: 1200px) {
-    #desktop-nav {
-        display: none;
-    }
-    #hamburger-nav {
-        display: flex;
-    }
-}
-
-
 @media screen and (max-width: 768px) {
-
-    h1, h2, h3 {
-      font-size: 2rem;
-    }
-
-    .section {
-      padding: 2rem 1rem; /* Adjust padding for mobile */
-   }
- 
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-    }
-
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-
-    #contact {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 80vh;
-      padding: 2rem 1rem;
-      padding-top: 10vh; /* Adjust padding */
-      margin-top: 2rem;
-    }
-
-    footer {
-      width: 100%;
-      padding: 2rem 0;
-      text-align: center;
-      background-color: rgb(23, 25, 63);
-      margin-top: auto;
-    }
-
-
-  /* Navigation / Hamburger Menu ------------------------*/
-
-    nav {
+  #desktop-nav {
+    display: none; /* Hide the desktop navbar */
+  }
+  #profile {
     display: flex;
-    justify-content: space-between; /* Space out logo and menu */
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    padding: 2rem 1rem;
+    min-height: auto; /* Ensure it takes up enough height */
+    width: 90%;
+    max-width: 600px;
+    margin: 2rem auto 10rem auto;
+    box-sizing: border-box; /* Include padding in height calculations */
+  }
+  i:active {
+    color: rgb(221, 192, 29);
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    padding: 0 1rem; /* Add padding for spacing */
-    }
+    padding: 2rem 1rem;
+    margin-top: 4rem; /* Add spacing above the About section */
+    box-sizing: border-box;
+  }
+  section {
+    flex-direction: column; /* Stack content vertically */
+    padding: 2rem 1rem; /* Add padding for smaller screens */
+    margin-bottom: 4rem; /* Add consistent spacing between sections */
+    height: fit-content;
+  }
+  .section__text {
+    font-size: 1.2rem; /* Reduce font size for smaller screens */
+    text-align: left; /* Center-align the text */
+    width: 100%; /* Allow the text to take up the full width */
+    line-height: 1.5; /* Improve readability */
+  }
 
-    .nav-links {
-      display: block; /* Show links in a vertical list */
-      text-align: center;
-    }
-
-    #hamburger-nav {
-      display: flex;
-      justify-content: flex-end;
-      padding-right: 1rem;
-      position: relative; /* Ensure positioning context */
-      z-index: 100; /* Higher than other elements */
-    }
-
-    .hamburger-menu {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      z-index: 200; /* Ensure it's above the logo or other elements */
-    }
-
-    .hamburger-icon {
-        cursor: pointer;
-        width: 2rem; /* Adjust the size of the icon */
-        height: 2rem;
-    }
-
-    .hamburger-icon span {
-        display: block;
-        height: 0.25rem;
-        width: 100%;
-        background-color: white; /* Adjust color if needed */
-        margin: 0.3rem 0;
-    }
-
-    .logo {
-      display: flex;
-      justify-content: flex-start; /* Align logo to the left */
-      align-items: center; /* Center vertically */
-    }
-
-    .logo img {
-      width: 120px; /* Adjust the size of the logo */
-      height: auto; /* Maintain aspect ratio */
-    }
-
-    .logo a {
-      display: inline-block;
-      padding: 0.5rem; /* Adjust padding to reduce clickable area */
-    }
-  /* -----------------------------------------*/
-
-
-
-  /* Profile Section ------------------------*/
-    #profile {
-      display: flex;
-      flex-direction: column; /* Stack content vertically */
-      align-items: center; /* Center align items */
-      padding: 2rem 2rem; /* Add padding for smaller screens */
-      justify-content: center; /* Center the section on mobile */
-    }
-  /* -----------------------------------------*/
-
-  /* About Section ---------------------------*/
-    #about .section-container {
-      flex-direction: column; /* Stack items vertically */
-      flex-wrap: wrap; /* Allow wrapping on smaller screens */
-      align-items: center; /* Center items */
-      text-align: center; /* Center text */
-      padding: 2rem 1rem; /* Adjust padding */
-    }
-  /* -----------------------------------------*/
-
-  /* Projects Section */
-  #projects {
-    margin-bottom: 2rem;
+  .section__text-container {
+    width: 100%; /* Allow the text to take up the full width */
+    max-width: 600px; /* Limit the maximum width for readability */
+    text-align: left; /* Center-align the text */
+    margin: 0 auto 1.5rem auto; /* Center the text and add spacing below */
+  }
+  .section__pic-container {
+    width: 100%; /* Ensure the image container takes full width */
+    max-width: 300px; /* Limit the maximum width of the image */
+    margin: 0 auto; /* Center the image container */
+  }
+  .section__pic-container img {
+    width: 100%; /* Scale the image to fit the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.75rem; /* Optional: Add rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
+  }
+  #desktop-nav {
+    display: none; /* Hide the desktop navbar */
+  }
+  #hamburger-nav {
+    display: flex; /* Show the mobile navbar */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed; /* Keep the navbar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other elements */
+  }
+  .hamburger-menu {
+    display: block; /* Ensure the hamburger menu is visible */
+    cursor: pointer;
+  }
+  .nav-links {
+    display: none; /* Hide links initially */
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.9); /* Optional: Add a background color */
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    left: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+  .hamburger-menu.open .nav-links {
+    display: flex; /* Show links when the menu is open */
+  }
+  .logo img {
+    width: 100px; /* Reduce the logo size */
+    height: auto;
+  }
+  .title1 {
+    font-size: 3rem;
+  }
+  .title2 {
+    font-size: 1.2rem;
+  }
+  h2, h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    text-align: left;
+    margin-bottom: 1rem;
+    white-space: nowrap; /* Prevent text from wrapping */
+    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  }
+  .title3::after, .title5::after {
+    content: ""; /* Optional: Adjust or remove content if needed */
+    display: block; /* Ensure the pseudo-element is on a new line */
+    width: 25%; /* Ensure it takes up the full width */
+    height: 2px; /* Adjust height for the underline */
+    background-color: rgba(221, 192, 29, 0.8); /* Optional: Add a background color */
+    margin-top: 0.5rem; /* Add spacing above the pseudo-element */
+  }
+  p {
+    font-size: 1rem; /* Adjust paragraph font size */
+    line-height: 1.5; /* Improve readability */
+  }
+  img {
+    max-width: 100%; /* Ensure images don't exceed the container width */
+    height: auto; /* Maintain aspect ratio */
   }
   .projects-container {
-    grid-template-columns: 1fr; /* Single column on small screens */
-    gap: 1.5rem; /* Add spacing between project cards */
+    display: grid;
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+    gap: 2rem; /* Add spacing between cards */
   }
-    
   .project-card {
-    padding: 1rem; /* Reduce padding */
+    padding: 1rem; /* Reduce padding for smaller screens */
   }
-
   .project-image {
-    width: 100%; /* Ensure images scale properly */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Ensure the image scales properly on smaller screens */
-    max-height: 150px; /* Reduce the height for smaller screens */
+    width: 100%; /* Ensure the image scales properly */
+    max-height: 200px; /* Limit the height of the image */
+    object-fit: contain; /* Crop the image to fit the container */
+    border-radius: 0.75rem; /* Optional: Add rounded corners */
   }
-  /* -----------------------------------------*/
-
-
-    .section__text {
-      text-align: left; /* Center-align text for better readability */
-      width: 90%; /* Allow the text to take up more width */
-      max-width: 600px; /* Limit the maximum width */
-    }
-
-    .section__text__p1 {
-      font-size: 1.2rem; /* Adjust font size for smaller screens */
-      padding-top: 2rem; /* Add spacing above the text */
-    }
-
-    .title1 {
-      font-size: 2rem; /* Reduce the font size for smaller screens */
-    }
-
-    .title2 {
-      font-size: 1.5rem; /* Adjust the subtitle size */
-    }
-
-    .section__text__p2 {
-      font-size: 1rem; /* Adjust paragraph font size */
-      line-height: 1.5; /* Improve readability */
-    }
-
-    #socials-container {
-      margin-top: 1.5rem; /* Add spacing above social icons */
-      gap: 1rem; /* Add spacing between icons */
-    }
-
-
-    .section-container {
-      flex-direction: column;
-      flex-wrap: wrap; /* Inhalte dürfen umbrechen */
-      align-items: center;
-      text-align: center; /* Center text */
-    }
-
-    .section__text-container, .section__pic-container {
-      max-width: 100%; /* Full width on smaller screens */
-      margin-bottom: 2rem; /* Add spacing between text and image */
-    }
-
-    .section__text-container {
-      width: 100%; /* Take up full width */
-      padding-left: 0; /* Remove padding */
-    }
-
-    .section__pic-container {
-      width: 80%;
-      margin: 2rem auto;
-      margin-top: 2rem; /* Add spacing between text and image */
-    }
-  
-    .section__text__p3 {
-      padding-left: 0;
-    }
-
-    .title3 {
-      padding-left: 0; /* Remove padding */
-      justify-content: center; /* Center the title */
-    }
-
-    .tech-list {
-    grid-template-columns: 1fr; /* Single column */
-    padding-left: 0;
-    }
-
-    .section__pic-container {
-      width: 80%;
-      margin: 2rem auto;
-    }
-
-    .section__pic-container img {
-      width: 90%; /* Scale image to fit the screen */
-    }
-
-    .title3::after{
-      width: 200px;
-    }
-
-    section{
-      margin: 0 2rem;
-    }
-
-    .section__text__p4 {
-      max-width: 90%; /* Wider text on mobile */
-      text-align: center; /* Center the text */
-      margin: 0 auto;  /* Center the paragraph */
-    }
-
-
+  footer {
+    padding: 1rem;
+    text-align: center;
   }
-  
-  @media screen and (max-width: 480px) {
-    .title1 {
-      font-size: 400%;
-    }
-  
-    .title2 {
-      font-size: 200%;
-    }
-    .section__text__p2{
-      font-size: 90%;
-    }
-    #profile{
-      height: auto;
-    }
-
-    /* Footer */
-    footer {
-      padding: 1rem;
-      text-align: center;
-    }
-
-    .footerlinks {
-        flex-direction: column; /* Stack links vertically */
-        gap: 1rem; /* Add spacing between links */
-    }
-
+  .footerlinks {
+    flex-direction: column; /* Stack links vertically */
+    gap: 1rem; /* Add spacing between links */
   }
-  
+}
 
-  @media (min-width: 768px) {
-
-    .nav-links {
-      display: flex; /* Show desktop navigation */
-    }
-
-    .hamburger-menu {
-      display: none; /* Hide hamburger menu */
-    }
-
-    .projects-container {
-      grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens and up */
-    }
-
-    .section__text-container, .section__pic-container {
-      flex: 1 1 50%; /* Split into two columns on larger screens */
-    }
-
-  }
-
-      /* Medium screens (tablets) */
-      @media screen and (min-width: 768px) and (max-width: 1023px) {
-        /* Adjustments for tablets */
-        #about .section-container {
-            flex-direction: row;
-        }
-        .projects-container {
-            grid-template-columns: repeat(2, 1fr); /* Two columns */
-        }
-    }
-
-
-  
-  @media (min-width: 1024px) {
-
-    .projects-container {
-      grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
-    }
-    
-  }
-
- 
