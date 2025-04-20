@@ -4,266 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emre Civas - Web developer & media designer.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d2c76cf080.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <main>
-    <nav id="desktop-nav">
-        <div class="logo">
-            <a href="#profile"><img 
-            src="./assets/logo.png" 
-            alt="Website logo" 
-            style="width:20%; height:20%"/>
-        </a>
-        </div>
-        <div class="nav-right">  <div>
-            <ul class="nav-links">
-                <li><a href="#about"> About</a></li>
-                <li><a href="#projects"> Projects</a></li>
-                <li><a href="#contact"> Contact</a></li>
-            </ul>
-        </div>
-        <div class="language-toggle">
-            <button class="lang-btn" onclick="switchLanguage('en')" title="English">🇬🇧</button>
-            <button class="lang-btn" onclick="switchLanguage('de')" title="German">🇩🇪</button>
-        </div>
-    </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div>
-            <a href="#profile"><img 
-            src="./assets/logo.png" 
-            alt="Website logo" 
-            style="width:20%; height:20%"/>
-        </a>
-        </div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()"> About</a></li>
-                <li><a href="#projects" onclick="toggleMenu()"> Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()"> Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section class="profilefirst" id="profile">
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title1">Emre Civas.
-            </h1>
-            <h2 class="title2">
-                Web developer & media designer.
-            </h2>
-            <p class="section__text__p2">
-                I'm specialized in building user friendly digital experiences.
-                Learning new technologies is my biggest hobby. 
-                I like to solve problems to develop my knowledge. 
-            </p>
-
-            <div id="socials-container">
-                <a href="https://www.linkedin.com/in/emre-civas/" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-linkedin" 
-                        alt="My Linkedin profile"></i>
-                </a>
-                <a href="https://github.com/visi0nz" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" 
-                        alt="My Github profile"></i>
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#profile">
+                    <img src="./assets/logo.png" alt="Website logo">
                 </a>
             </div>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="center-section-content">
-        <div class="section-container">  
-            <div class="section__text-container">
-                <h2 class="title3"> About</h2>      
-                <p class="section__text__p3">
-                Hi, my name is Emre. I studied Online Media at the
-                Furtwangen University (Germany).
-                </p> 
-                <p class="section__text__p3">
-                I'm a passionate web developer and media designer.
-                I have experience in HTML, CSS and JavaScript 
-                to build exceptional websites. 
-                I am knowledgeable in Python, Adobe Creative Suite, 
-                video & audio production.
-                I am always interested in learning new technologies
-                to supplement my skillset.
-
-                <p class="section__text__p3">
-                My main focus right now is to learn more about backend development
-                by working on new projects with C# and SQL.
-                </p>
-                <p class="section__text__p3">
-                These are some technologies I've been working with recently:
-                </p>
-                
-                <p class="section__text__p3">
-                <ul class="tech-list">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>React</li>
-                    <li>Python</li>
-                    <li>C#</li>
-                    <li>SQL</li>
-                    <li>Wordpress</li>
-                    <li>Adobe CS</li>
+            <nav class="desktop-nav">
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-                </p>
-            </div>  
-        <div class="section__pic-container">
-            <img 
-            src="./assets/about-pic.png" 
-            alt="About Me"
-            class="about-pic"/>
-        </div> 
-    </div>
-</div>
-    </section>
-
-    <section id="projects">
-        
-        <div class="center-section-content">
-        <h2 class="title5">Projects</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="./assets/project1.png" alt="Project 1" class="project-image">
-                <h3>Corporate Design: Healthcare Business</h3>
-                <p>Design: Logo, Business Card, Flyer & Responsive Website.</p>
-                <div class="project-technologies">
-                    <span>Adobe CS</span>
-                    <span>Wordpress</span>
-                </div>
+            </nav>
+            <div class="language-toggle">
+                <button class="lang-btn" onclick="switchLanguage('en')" title="English">🇬🇧</button>
+                <button class="lang-btn" onclick="switchLanguage('de')" title="German">🇩🇪</button>
             </div>
-            <div class="project-card">
-                <img src="./assets/project2.png" alt="Project 2" class="project-image">
-                <h3>Corporate Design: Food Business</h3>
-                <p>Design: Logo, Store Window, T-Shirt & Sticker.</p>
-                <p>Photo shoot for high quality product pictures.</p>
-                <div class="project-technologies">
-                    <span>Adobe CS</span>
+            <div class="hamburger-nav">
+                <div class="hamburger-icon" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </div>
-            <div class="project-card">
-                <img src="./assets/project3.png" alt="Project 3" class="project-image">
-                <h3>Website: Portfolio</h3>
-                <p>My personal Portfolio Website coded by me.</p>
-                <div class="project-technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                </div>
-                <i class="fa-solid fa-house"
-                    alt="My Personal Portfolio" 
-                    onclick="location.href='#profile'"></i>
-                <a href="https://github.com/visi0nz/portfolio" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" 
-                    alt="My Github profile"></i>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/project4.png" alt="Project 4" class="project-image">
-                <h3>Database: Anime</h3>
-                <p>This is a project for searching Anime,
-                    with integrated API.
-                </p>
-                <div class="project-technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>JavaScript</span>
-                    <span>React</span>
-                </div>
-                <a href="https://github.com/visi0nz/animedatabase" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" 
-                        alt="My Github profile"></i>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/project3.png" alt="Project 5" class="project-image">
-                <h3>Next Project</h3>
-                <p>Details about project.  Key features and technologies used.</p>
-                <div class="project-technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Javascript</span>
-                </div>
-                <a href="https://github.com/visi0nz" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" 
-                        alt="My Github profile"></i>
-                </a>
-            </div>
-
-            <div class="project-card">
-                <img src="./assets/project3.png" alt="Project 6" class="project-image">
-                <h3>Next Project</h3>
-                <p>Details about project.  Key features and technologies used. </p>
-                <div class="project-technologies">
-                    <span>HTML</span>
-                    <span>CSS</span>
-                    <span>Javascript</span>
-                </div>
-                <a href="https://github.com/visi0nz" 
-                    target="_blank" 
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-github" 
-                        alt="My Github profile"></i>
-                </a>
+                <nav class="menu-links">
+                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                </nav>
             </div>
         </div>
-    </div>
-    </section>
-
-
-    <section id="contact">
-        <div class="center-section-content">
-        <div class="section-container">
-            <div class="contact-details">
-                <h2 class="title4">Contact Me</h2>
-                <p class="section__text__p4">
-                    I'm always interested in hearing about new projects, 
-                    opportunities, or just to connect.
-                    Feel free to reach out!
-                </p> 
-                <a 
-                href="mailto:civas.em@gmail.com" 
-                class="email-link"
-                target="_blank" 
-                rel="noopener noreferrer">
-                    E-mail me
-                </a>
+    </header>
+    <main>
+        <section id="profile" class="section">
+            <div class="container">
+                <div class="profile-content">
+                    <p class="section-text">Hello, I'm</p>
+                    <h1 class="profile-title-1">Emre Civas.</h1>
+                    <h2 class="profile-title-2">Web developer & media designer.</h2>
+                    <p class="section-text">
+                        I'm specialized in building user-friendly digital experiences.
+                        Learning new technologies is my biggest hobby.
+                        I like to solve problems to develop my knowledge.
+                    </p>
+                    <div id="socials-container">
+                        <a href="https://www.linkedin.com/in/emre-civas/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin icon" alt="My Linkedin profile"></i>
+                        </a>
+                        <a href="https://github.com/visi0nz" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github icon" alt="My Github profile"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
+        </section>
+        <section id="about" class="section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text">
+                        <h2 class="section-title">About</h2>
+                        <p class="section-text-2">
+                            Hi, my name is Emre. I studied Online Media at the
+                            Furtwangen University (Germany).
+                        </p>
+                        <p class="section-text-2">
+                            I'm a passionate web developer and media designer.
+                            I have experience in HTML, CSS, and JavaScript
+                            to build exceptional websites.
+                            I am knowledgeable in Python, Adobe Creative Suite,
+                            video & audio production...
+                        </p>
+                        <p class="section-text-2">
+                            My main focus right now is to learn more about backend development
+                            by working on new projects with C# and SQL.
+                        </p>
+                        <p class="section-text-2">
+                            These are some technologies I've been working with recently:
+                        </p>
+                        <ul class="about-tech-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                            <li>Python</li>
+                            <li>C#</li>
+                            <li>SQL</li>
+                            <li>Wordpress</li>
+                            <li>Adobe CS</li>
+                        </ul>
+                    </div>
+                    <div class="about-image-container">
+                        <img src="./assets/about-pic.png" alt="About Me">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title-2">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="./assets/project1.png" alt="Project 1" class="project-image">
+                        <h3 class="project-title">Corporate Design: Healthcare Business</h3>
+                        <p class="section-text-3">Design: Logo, Business Card, Flyer & Responsive Website.</p>
+                        <div class="project-skills">
+                            <span>Adobe CS</span>
+                            <span>Wordpress</span>
+                        </div>
+                        <a href="https://github.com/visi0nz" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                            <i class="fab fa-github" alt="View Project on GitHub"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <img src="./assets/project2.png" alt="Project 2" class="project-image">
+                        <h3 class="project-title">Corporate Design: Food Business</h3>
+                        <p class="section-text-3">Design: Logo, Store Window, T-Shirt & Sticker. Photo shoot for high quality product pictures</p>
+                        <div class="project-skills">
+                            <span>Adobe CS</span>
+                        </div>
+                        <a href="https://github.com/visi0nz" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                            <i class="fab fa-github" alt="View Project on GitHub"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <img src="./assets/project3.png" alt="Project 3" class="project-image">
+                        <h3 class="project-title">Website: Portfolio</h3>
+                        <p class="section-text-3">My personal Portfolio Website coded by me.</p>
+                        <div class="project-skills">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Javascript</span>
+                        </div>
+                        <a href="https://github.com/visi0nz/portfolio" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                            <i class="fab fa-github" alt="View Project on GitHub"></i>
+                        </a>
+                    </div>
+                    <div class="project-card">
+                        <img src="./assets/project4.png" alt="Project 4" class="project-image">
+                        <h3 class="project-title">Database: Anime</h3>
+                        <p class="section-text-3">This is a project for searching Anime, with integrated API.</p>
+                        <div class="project-skills">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                            <span>React</span>
+                        </div>
+                        <a href="https://github.com/visi0nz/animedatabase" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                            <i class="fab fa-github" alt="View Project on GitHub"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-content">
+                    <h2 class="section-title-3">Contact Me</h2>
+                    <p class="contact-text">
+                        I'm always interested in hearing about new projects,
+                        opportunities, or just to connect.
+                        Feel free to reach out!
+                    </p>
+                    <a href="mailto:civas.em@gmail.com" class="email-link" target="_blank" rel="noopener noreferrer">
+                        E-mail me
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="section-text">Designed & Built by Emre Civas.</p>
+        <div class="footer-links">
+            <a href="impressum.html" target="_blank">Impressum</a>
+            <a href="datenschutz.html" target="_blank">Datenschutz</a>
         </div>
-    </div>
-    </section>
-</main>
-<footer>
-    <p class="section__text__p7">Designed & Built by Emre Civas.</p>
-    <ul class="footerlinks">
-        <a href="impressum.html" target="_blank"> Impressum</a>
-        <a href="datenschutz.html" target="_blank"> Datenschutz</a>
-    </ul>
-</footer>
-
-  <script src="script.js"></script>  
+    </footer>
+    <script src="script.js"></script>  
 </body>
 </html>

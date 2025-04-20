@@ -1,148 +1,75 @@
-@media screen and (max-width: 768px) {
-  #desktop-nav {
-    display: none; /* Hide the desktop navbar */
-  }
-  #profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content vertically */
-    align-items: center; /* Center content horizontally */
-    padding: 2rem 1rem;
-    min-height: auto; /* Ensure it takes up enough height */
-    width: 90%;
-    max-width: 600px;
-    margin: 2rem auto 10rem auto;
-    box-sizing: border-box; /* Include padding in height calculations */
-  }
-  i:active {
-    color: rgb(221, 192, 29);
-  }
-  #about {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 1rem;
-    margin-top: 4rem; /* Add spacing above the About section */
-    box-sizing: border-box;
-  }
-  section {
-    flex-direction: column; /* Stack content vertically */
-    padding: 2rem 1rem; /* Add padding for smaller screens */
-    margin-bottom: 4rem; /* Add consistent spacing between sections */
-    height: fit-content;
-  }
-  .section__text {
-    font-size: 1.2rem; /* Reduce font size for smaller screens */
-    text-align: left; /* Center-align the text */
-    width: 100%; /* Allow the text to take up the full width */
-    line-height: 1.5; /* Improve readability */
-  }
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none;
+    }
 
-  .section__text-container {
-    width: 100%; /* Allow the text to take up the full width */
-    max-width: 600px; /* Limit the maximum width for readability */
-    text-align: left; /* Center-align the text */
-    margin: 0 auto 1.5rem auto; /* Center the text and add spacing below */
-  }
-  .section__pic-container {
-    width: 100%; /* Ensure the image container takes full width */
-    max-width: 300px; /* Limit the maximum width of the image */
-    margin: 0 auto; /* Center the image container */
-  }
-  .section__pic-container img {
-    width: 100%; /* Scale the image to fit the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 0.75rem; /* Optional: Add rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add a subtle shadow */
-  }
-  #desktop-nav {
-    display: none; /* Hide the desktop navbar */
-  }
-  #hamburger-nav {
-    display: flex; /* Show the mobile navbar */
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    position: fixed; /* Keep the navbar fixed at the top */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it stays above other elements */
-  }
-  .hamburger-menu {
-    display: block; /* Ensure the hamburger menu is visible */
-    cursor: pointer;
-  }
-  .nav-links {
-    display: none; /* Hide links initially */
-    flex-direction: column; /* Stack links vertically */
-    gap: 1rem;
-    background-color: rgba(0, 0, 0, 0.9); /* Optional: Add a background color */
-    position: absolute;
-    top: 100%; /* Position below the navbar */
-    left: 0;
-    width: 100%;
-    padding: 1rem;
-  }
-  .hamburger-menu.open .nav-links {
-    display: flex; /* Show links when the menu is open */
-  }
-  .logo img {
-    width: 100px; /* Reduce the logo size */
-    height: auto;
-  }
-  .title1 {
-    font-size: 3rem;
-  }
-  .title2 {
-    font-size: 1.2rem;
-  }
-  h2, h3 {
-    font-size: 1.2rem;
-    line-height: 1.4;
-    text-align: left;
-    margin-bottom: 1rem;
-    white-space: nowrap; /* Prevent text from wrapping */
-    text-overflow: ellipsis; /* Add ellipsis for overflowing text */
-  }
-  .title3::after, .title5::after {
-    content: ""; /* Optional: Adjust or remove content if needed */
-    display: block; /* Ensure the pseudo-element is on a new line */
-    width: 25%; /* Ensure it takes up the full width */
-    height: 2px; /* Adjust height for the underline */
-    background-color: rgba(221, 192, 29, 0.8); /* Optional: Add a background color */
-    margin-top: 0.5rem; /* Add spacing above the pseudo-element */
-  }
-  p {
-    font-size: 1rem; /* Adjust paragraph font size */
-    line-height: 1.5; /* Improve readability */
-  }
-  img {
-    max-width: 100%; /* Ensure images don't exceed the container width */
-    height: auto; /* Maintain aspect ratio */
-  }
-  .projects-container {
-    display: grid;
-    grid-template-columns: 1fr; /* Single column on smaller screens */
-    gap: 2rem; /* Add spacing between cards */
-  }
-  .project-card {
-    padding: 1rem; /* Reduce padding for smaller screens */
-  }
-  .project-image {
-    width: 100%; /* Ensure the image scales properly */
-    max-height: 200px; /* Limit the height of the image */
-    object-fit: contain; /* Crop the image to fit the container */
-    border-radius: 0.75rem; /* Optional: Add rounded corners */
-  }
-  footer {
-    padding: 1rem;
-    text-align: center;
-  }
-  .footerlinks {
-    flex-direction: column; /* Stack links vertically */
-    gap: 1rem; /* Add spacing between links */
-  }
+    .hamburger-nav {
+        display: flex;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    #profile {
+        align-items: center;
+        text-align: left;
+    }
+
+    .profile-content {
+        max-width: 100%;
+    }
+
+    .profile-title-1 {
+        font-size: 3rem;
+    }
+
+    .profile-title-2 {
+        font-size: 1.5rem;
+    }
+
+    #about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-text {
+        text-align: left;
+    }
+
+    .about-image-container {
+        max-width: 100%;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #contact {
+        text-align: center;
+    }
+
+    .menu-links.open {
+        max-height: 500px;
+    }
 }
 
+@media (min-width: 769px) {
+    .hamburger-nav {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: flex;
+    }
+}
