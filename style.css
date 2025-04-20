@@ -75,6 +75,33 @@ img {
     margin-top: 0.4rem;
 }
 
+.section-title-ger {
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: left;
+}
+
+.section-title-ger::before {
+    counter-increment: sections;
+    content: "0" counter(sections) ". ";
+    color: rgb(221, 192, 29);
+}
+
+.section-title-ger::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 250px;
+    height: 2px;
+    background-color: rgb(221, 192, 29);
+    margin-top: 0.4rem;
+}
+
+
+
+
 .section-title-2 {
     font-weight: 600;
     font-size: 2rem;
@@ -192,6 +219,7 @@ header.hidden {
 
 .lang-btn:hover {
     color: rgb(221, 192, 29);
+    transform: translateY(-0.1rem);
 }
 
 /* --- Hamburger Menu --- */
@@ -521,7 +549,7 @@ footer {
     padding-bottom: 100px;  /* Add padding at the bottom */
 }
 
-.title6 {
+.impressdat-title {
     font-weight: 600;
     font-size: 1.5rem;
     color: white;
@@ -532,7 +560,7 @@ footer {
     margin-bottom: 2rem;
     }
 
-.title6::after {
+.impressdat-title::after {
     content: "";
     display: block;
     position: relative;
@@ -542,7 +570,7 @@ footer {
     background-color: rgb(221, 192, 29);
     }
 
-.title7 {
+.impressdat-title-2 {
     font-weight: 600;
     font-family: Lato;
     font-size: 1.2rem;
