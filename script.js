@@ -29,3 +29,19 @@ window.addEventListener("scroll", () => {
     }
     lastScrollY = window.scrollY; // Update the last scroll position
 });
+
+
+// Projects
+
+function toggleProject(button) {
+  const projectDetails = button.nextElementSibling; // Nächstes Element (Details)
+  const isVisible = projectDetails.style.display === "block";
+
+  // Alle anderen Projekte schließen
+  document.querySelectorAll(".project-details").forEach((details) => {
+      details.style.display = "none";
+  });
+
+  // Aktuelles Projekt umschalten
+  projectDetails.style.display = isVisible ? "none" : "block";
+}

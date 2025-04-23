@@ -391,67 +391,60 @@ header.hidden {
 
 
 /* --- Projects Section --- */
+
 #projects {
-    min-height: calc(100vh - 80px);
     counter-increment: sections;
-    margin-top: 5rem;
 }
 
-.section-text-3 {
-    font-family: Lato;
-    margin-bottom: 1rem;
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* Abstand zwischen den Projekten */
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background-color: rgba(255, 255, 255, 0.05);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    border: 1px solid rgb(221, 192, 29, 0.6);
-}
-
-.project-card:hover {
-    transform: translateY(-0.5rem);
-}
-
-.project-image {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.project-image.small-image {
-    width: 80%; /* Passe die Breite an */
-    height: auto; /* Behalte das Seitenverhältnis bei */
-    max-width: 300px; /* Optional: Begrenze die maximale Breite */
-    object-fit: cover; /* Stelle sicher, dass das Bild den Container füllt */
+.project-item {
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .project-title {
-    font-family: Lato;
+    width: 100%;
+    text-align: left;
+    background-color: rgb(23, 25, 63);
     color: rgb(221, 192, 29);
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.project-title:hover {
+    background-color: rgb(34, 36, 78);
+}
+
+.project-details {
+    display: none; /* Verstecke die Details standardmäßig */
+    padding: 1rem;
+}
+
+.project-details img {
+    width: 30%;
+    height: auto;
+    border-radius: 0.5rem;
     margin-bottom: 1rem;
 }
 
 .project-skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 1.5rem; /* Vergrößert den Abstand oberhalb der Skills */
+    margin-bottom: 1rem; /* Vergrößert den Abstand unterhalb der Skills */
 }
 
-.project-skills span {
+.project-skills span{
     background-color: rgba(255, 255, 255, 0.1);
     color: rgb(221, 192, 29);
     padding: 0.5rem 0.75rem;
@@ -461,13 +454,10 @@ header.hidden {
 }
 
 .project-github-link {
-    font-size: 2rem;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.project-github-link:hover {
-    color: rgb(221, 192, 29);
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0.1rem;
 }
 
 

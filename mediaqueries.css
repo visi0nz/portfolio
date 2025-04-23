@@ -76,8 +76,10 @@
         max-width: 100%;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
+    .project-details img {
+        width: 100%; /* Vergrößere die Breite des Bildes auf 100% des Containers */
+        height: auto; /* Behalte das Seitenverhältnis bei */
+        margin-bottom: 1rem; /* Optional: Abstand unterhalb des Bildes */
     }
 
     #contact {
