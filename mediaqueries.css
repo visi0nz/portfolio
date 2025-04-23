@@ -5,6 +5,31 @@
 
     .hamburger-nav {
         display: flex;
+        justify-content: flex-end; /* Align items to the right */
+        align-items: center; /* Center items vertically */
+        padding: 0 1rem; /* Add some horizontal padding */
+        width: 100%; /* Ensure the navbar takes the full width */
+    }
+
+    .hamburger-icon {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .hamburger-icon span {
+        width: 30px;
+        height: 3px;
+        background-color: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .language-toggle {
+        display: flex;
+        gap: 0.5rem; /* Add spacing between language buttons */
+        margin-left: 1rem;
     }
 
     .section {
@@ -65,11 +90,107 @@
 }
 
 @media (min-width: 769px) {
+    header {
+        width: 100%; /* Stelle sicher, dass die Navbar die gesamte Breite einnimmt */
+        padding: 0; /* Entferne unnötige Abstände */
+    }
+
     .hamburger-nav {
         display: none;
     }
 
     .desktop-nav {
         display: flex;
+        justify-content: flex-end; /* Positioniere die Links und den Language Switch ganz rechts */
+        align-items: center; /* Zentriere die Elemente vertikal */
+        gap: 3rem; /* Füge Abstand zwischen den Links hinzu */
+        width: 100%; /* Stelle sicher, dass die Navbar die volle Breite einnimmt */
+    }
+
+    .desktop-nav .nav-links a {
+        font-size: 1rem; /* Reduce the font size */
+        color: white; /* Ensure the text color is visible */
+        text-decoration: none; /* Remove underline */
+    }
+
+    .desktop-nav .nav-links a:hover {
+        color: rgb(221, 192, 29); /* Optional: Add hover effect */
+    }
+
+    .nav-container {
+        max-width: 1900px; /* Vergrößere die maximale Breite des Inhalts */
+        margin: 0 auto; /* Zentriere den Inhalt der Navbar */
+        padding: 0 3rem; /* Füge horizontalen Abstand hinzu */
+        display: flex;
+        justify-content: space-between; /* Verteile das Logo und die Links */
+        align-items: center; /* Zentriere die Elemente vertikal */
+    }
+
+    .language-toggle {
+        display: flex;
+        gap: 0.5rem; /* Add spacing between language buttons */
+        margin-left: 2rem; /* Optional: Add spacing between the nav-links and language switcher */
+    }
+
+    .logo {
+        margin-right: auto; /* Positioniere das Logo ganz links */
+    }
+
+    .logo img {
+        width: 80px; /* Passe die Breite des Logos an */
+        height: auto; /* Behalte das Seitenverhältnis bei */
+    }
+
+    .section {
+        padding: 2rem 0; /* Reduziere den vertikalen Abstand zwischen allen Sektionen */
+    }
+
+    #profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start; /* Inhalt nach links ausrichten */
+        padding-left: 5rem; /* Füge mehr Abstand links hinzu */
+        padding-right: 2rem; /* Optional: Reduziere den rechten Abstand */
+        margin-left: 0; /* Entferne jeglichen automatischen horizontalen Abstand */
+        width: 100%; /* Stelle sicher, dass die Sektion die volle Breite einnimmt */
+        max-width: 1200px; /* Begrenze die maximale Breite */
+        box-sizing: border-box; /* Padding wird in die Breite einbezogen */
+    }
+
+    .profile-content {
+        max-width: 600px; /* Begrenze die Breite des Inhalts */
+        text-align: left; /* Text linksbündig ausrichten */
+    }
+
+    #about {
+        margin-top: 0; /* Entferne den oberen Abstand der About Section */
+    }
+
+    .about-content {
+        flex-direction: row; /* Display text and image side by side */
+        align-items: center; /* Align items vertically */
+        justify-content: space-between; /* Add space between text and image */
+        gap: 1rem; /* Add spacing between text and image */
+        max-width: 1000px; /* Reduce the overall width of the About section */
+        margin: 0 auto; /* Center the section horizontally */
+    }
+
+    .about-text {
+        text-align: left; /* Align text to the left */
+        max-width: 60%; /* Limit the text container to half the width */
+    }
+
+    .about-image-container {
+        max-width: 45%; /* Reduce the width of the image container */
+        margin-top: 5rem;
+        margin-right: 2rem;
+    }
+
+    .about-image-container img {
+        width: 100%; /* Ensure the image scales properly */
+        height: auto; /* Maintain aspect ratio */
+        max-height: 300px; /* Limit the height of the image */
+        border-radius: 0.75rem; /* Optional: Add rounded corners */
     }
 }

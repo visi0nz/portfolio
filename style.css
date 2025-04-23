@@ -69,7 +69,7 @@ img {
     content: "";
     display: block;
     position: relative;
-    width: 180px;
+    width: 240px;
     height: 2px;
     background-color: rgb(221, 192, 29);
     margin-top: 0.4rem;
@@ -93,14 +93,11 @@ img {
     content: "";
     display: block;
     position: relative;
-    width: 250px;
+    width: 260px;
     height: 2px;
     background-color: rgb(221, 192, 29);
     margin-top: 0.4rem;
 }
-
-
-
 
 .section-title-2 {
     font-weight: 600;
@@ -179,7 +176,7 @@ header.hidden {
 }
 
 .logo img {
-    width: 50px;
+    width: 100px;
     height: auto;
 }
 
@@ -201,6 +198,7 @@ header.hidden {
     counter-increment: navigation;
     content: "0" counter(navigation) ".";
     color: rgb(221, 192, 29);
+    margin-right: 0.5rem;
 }
 
 .language-toggle {
@@ -426,10 +424,17 @@ header.hidden {
 
 .project-image {
     width: 100%;
-    height: 200px;
+    height: auto;
     object-fit: cover;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
+}
+
+.project-image.small-image {
+    width: 80%; /* Passe die Breite an */
+    height: auto; /* Behalte das Seitenverhältnis bei */
+    max-width: 300px; /* Optional: Begrenze die maximale Breite */
+    object-fit: cover; /* Stelle sicher, dass das Bild den Container füllt */
 }
 
 .project-title {
