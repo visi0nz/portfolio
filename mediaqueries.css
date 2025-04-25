@@ -220,10 +220,8 @@
         justify-content: space-between; /* Align the arrow icon to the right */
         align-items: center; /* Vertically center the text and arrow */
         width: 100%; /* Make the title span the full width */
-        background-color: rgb(23, 25, 63);
         color: rgb(221, 192, 29);
         font-size: 1rem;
-        padding: 1rem;
         border: none;
         cursor: pointer;
         outline: none;

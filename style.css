@@ -420,7 +420,7 @@ header.hidden {
     color: rgb(221, 192, 29);
     font-size: 1rem;
     font-family: "IBM Plex Mono";
-    padding: 1rem;
+    padding: 0.5rem;
     border: none;
     cursor: pointer;
     outline: none;
@@ -444,6 +444,7 @@ header.hidden {
     display: none; /* Verstecke die Details standardmäßig */
     padding: 1rem;
     font-family: Lato;
+    background-color: rgb(34, 36, 78);
 }
 
 .project-content {
