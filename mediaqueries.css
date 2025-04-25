@@ -195,4 +195,72 @@
         max-height: 300px; /* Limit the height of the image */
         border-radius: 0.75rem; /* Optional: Add rounded corners */
     }
+
+    #projects .container {
+        max-width: 600px; /* Reduce the maximum width of the projects section */
+        margin: 0 auto; /* Center the section horizontally */
+        padding: 0 2rem; /* Add horizontal padding for spacing */
+    }
+
+    .project-item {
+        position: relative; /* Ensure the project item is positioned relative to its content */
+        display: flex;
+        flex-direction: column; /* Stack the title and details vertically */
+        width: 100%; /* Ensure the project item spans the full width */
+        gap: 1rem; /* Add spacing between the title and details */
+        border: 1px solid #ccc;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-title {
+        position: relative; /* Ensure the title stays within the project item */
+        display: flex;
+        justify-content: space-between; /* Align the arrow icon to the right */
+        align-items: center; /* Vertically center the text and arrow */
+        width: 100%; /* Make the title span the full width */
+        background-color: rgb(23, 25, 63);
+        color: rgb(221, 192, 29);
+        font-size: 1rem;
+        padding: 1rem;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .project-title:hover {
+        background-color: rgb(34, 36, 78);
+    }
+    
+
+    .project-list {
+        display: flex;
+        flex-direction: column; /* Stack project items vertically */
+        gap: 1.5rem; /* Add spacing between project items */
+    }
+
+    .project-content {
+        flex-direction: row; /* Align text and image side by side */
+        align-items: flex-start; /* Align text and image at the top */
+        gap: 2rem; /* Add spacing between text and image */
+    }
+
+    .project-text {
+        flex: 1; /* Allow the text to take up available space */
+    }
+
+    .project-image-container {
+        flex: 1; /* Allow the image to take up available space */
+        max-width: 50%; /* Limit the width of the image container */
+        justify-content: center; /* Center the image horizontally */
+        align-items: flex-start; /* Align the image at the top */
+    }
+
+    .project-image {
+        width: 100%; /* Ensure the image fills the container */
+        height: auto; /* Maintain aspect ratio */
+    }
 }
+

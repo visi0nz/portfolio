@@ -34,14 +34,20 @@ window.addEventListener("scroll", () => {
 // Projects
 
 function toggleProject(button) {
-  const projectDetails = button.nextElementSibling; // Nächstes Element (Details)
-  const isVisible = projectDetails.style.display === "block";
+    const projectDetails = button.nextElementSibling; // Get the project details
+    const isVisible = projectDetails.style.display === "block";
 
-  // Alle anderen Projekte schließen
-  document.querySelectorAll(".project-details").forEach((details) => {
-      details.style.display = "none";
-  });
+    // Close all other projects
+    document.querySelectorAll(".project-details").forEach((details) => {
+        details.style.display = "none";
+    });
+    document.querySelectorAll(".project-title").forEach((title) => {
+        title.classList.remove("open"); // Remove the 'open' class from all buttons
+    });
 
-  // Aktuelles Projekt umschalten
-  projectDetails.style.display = isVisible ? "none" : "block";
+    // Toggle the current project
+    if (!isVisible) {
+        projectDetails.style.display = "block";
+        button.classList.add("open"); // Add the 'open' class to the current button
+    }
 }

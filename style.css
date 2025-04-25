@@ -410,12 +410,16 @@ header.hidden {
 }
 
 .project-title {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
     text-align: left;
     background-color: rgb(23, 25, 63);
     color: rgb(221, 192, 29);
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1rem;
+    font-family: "IBM Plex Mono";
     padding: 1rem;
     border: none;
     cursor: pointer;
@@ -427,19 +431,52 @@ header.hidden {
     background-color: rgb(34, 36, 78);
 }
 
+.arrow-icon {
+    font-size: 1rem;
+    transition: transform 0.3s ease; /* Smooth rotation animation */
+}
+
+.project-title.open .arrow-icon {
+    transform: rotate(180deg); /* Rotate the arrow when the project is open */
+}
+
 .project-details {
     display: none; /* Verstecke die Details standardmäßig */
     padding: 1rem;
+    font-family: Lato;
 }
 
-.project-details img {
-    width: 30%;
-    height: auto;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
+.project-content {
+    display: flex;
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: flex-start; /* Align text and image at the top */
+    gap: 1rem; /* Add spacing between text and image */
 }
+
+.project-text {
+    flex: 1; /* Allow the text to take up available space */
+    text-align: left;
+}
+
+.project-image-container {
+    flex: 1; /* Allow the image to take up available space */
+    display: flex; /* Use Flexbox to align the image */
+    justify-content: center; /* Center the image horizontally */
+    align-items: flex-start; /* Align the image at the top */
+}
+
+.project-image {
+    width: 100%; /* Ensure the image scales properly */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0.5rem; /* Optional: Add rounded corners */
+}
+
 
 .project-skills {
+    display: flex; /* Use Flexbox for layout */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    gap: 0.5rem; /* Add spacing between skill items */
+    justify-content: flex-start; /* Align items to the left */
     margin-top: 1.5rem; /* Vergrößert den Abstand oberhalb der Skills */
     margin-bottom: 1rem; /* Vergrößert den Abstand unterhalb der Skills */
 }
@@ -451,11 +488,12 @@ header.hidden {
     border-radius: 1rem;
     font-size: 0.75rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    white-space: nowrap; /* Prevent text from breaking inside the span */
 }
 
 .project-github-link {
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     text-decoration: none;
     padding: 0.1rem;
 }
