@@ -57,6 +57,10 @@ img {
     color: white;
     margin-bottom: 2rem;
     text-align: left;
+    text-decoration: underline; /* Add an underline */
+    text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
+    text-decoration-thickness: 2px; /* Set the thickness of the underline */
+    text-underline-offset: 10px; /* Add spacing between the text and the underline */
 }
 
 .section-title::before {
@@ -65,15 +69,6 @@ img {
     color: rgb(221, 192, 29);
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    position: relative;
-    width: 240px;
-    height: 2px;
-    background-color: rgb(221, 192, 29);
-    margin-top: 0.4rem;
-}
 
 .section-title-ger {
     font-weight: 600;
@@ -81,6 +76,10 @@ img {
     color: white;
     margin-bottom: 2rem;
     text-align: left;
+    text-decoration: underline; /* Add an underline */
+    text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
+    text-decoration-thickness: 2px; /* Set the thickness of the underline */
+    text-underline-offset: 10px; /* Add spacing between the text and the underline */
 }
 
 .section-title-ger::before {
@@ -89,22 +88,16 @@ img {
     color: rgb(221, 192, 29);
 }
 
-.section-title-ger::after {
-    content: "";
-    display: block;
-    position: relative;
-    width: 260px;
-    height: 2px;
-    background-color: rgb(221, 192, 29);
-    margin-top: 0.4rem;
-}
-
 .section-title-2 {
     font-weight: 600;
     font-size: 2rem;
     color: white;
     margin-bottom: 2rem;
     text-align: left;
+    text-decoration: underline; /* Add an underline */
+    text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
+    text-decoration-thickness: 2px; /* Set the thickness of the underline */
+    text-underline-offset: 10px; /* Add spacing between the text and the underline */
 }
 
 .section-title-2::before {
@@ -113,15 +106,6 @@ img {
     color: rgb(221, 192, 29);
 }
 
-.section-title-2::after {
-    content: "";
-    display: block;
-    position: relative;
-    width: 240px;
-    height: 2px;
-    background-color: rgb(221, 192, 29);
-    margin-top: 0.4rem;
-}
 
 .section-text {
     color:rgb(221, 192, 29);
@@ -141,6 +125,10 @@ img {
     color: white;
     margin-bottom: 2rem;
     text-align: center;
+    text-decoration: underline; /* Add an underline */
+    text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
+    text-decoration-thickness: 2px; /* Set the thickness of the underline */
+    text-underline-offset: 10px; /* Add spacing between the text and the underline */
 }
 
 .section-title-3::before {
@@ -592,17 +580,13 @@ footer {
     display: flex;
     justify-content: left;
     margin-bottom: 2rem;
+    text-decoration: underline; /* Add an underline */
+    text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
+    text-decoration-thickness: 2px; /* Set the thickness of the underline */
+    text-underline-offset: 10px; /* Add spacing between the text and the underline */
     }
 
-.impressdat-title::after {
-    content: "";
-    display: block;
-    position: relative;
-    width: 450px;
-    height: 2px;
-    margin-left: 20px;
-    background-color: rgb(221, 192, 29);
-    }
+
 
 .impressdat-title-2 {
     font-weight: 600;

@@ -51,3 +51,25 @@ function toggleProject(button) {
         button.classList.add("open"); // Add the 'open' class to the current button
     }
 }
+
+// Footer Links
+// Adjust target attribute for Impressum and Datenschutz links
+function adjustFooterLinks() {
+    const footerLinks = document.querySelectorAll('.footer-links a');
+
+    footerLinks.forEach((link) => {
+        if (window.innerWidth > 768) {
+            // For desktop: Open in a new window
+            link.setAttribute('target', '_blank');
+        } else {
+            // For mobile: Open in the same window
+            link.removeAttribute('target');
+        }
+    });
+}
+
+// Run the function on page load
+adjustFooterLinks();
+
+// Run the function on window resize
+window.addEventListener('resize', adjustFooterLinks);

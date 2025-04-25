@@ -89,6 +89,20 @@
     .menu-links.open {
         max-height: 500px;
     }
+
+    #impressum {
+        width: 100%; /* Make the content take up the full width */
+        padding: 1rem; /* Add padding for spacing */
+        margin: 0; /* Remove any horizontal margins */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
+
+    #datenschutz {
+        width: 100%; /* Make the content take up the full width */
+        padding: 1rem; /* Add padding for spacing */
+        margin: 0; /* Remove any horizontal margins */
+        box-sizing: border-box; /* Ensure padding is included in the width */
+    }
 }
 
 @media (min-width: 769px) {
