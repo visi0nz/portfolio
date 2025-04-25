@@ -39,7 +39,7 @@ function switchLanguage(lang) {
 }
 
 
-// Navbar
+// Navbar disappearing / appearing
 let lastScrollY = window.scrollY; // Track the last scroll position
 
 window.addEventListener("scroll", () => {
@@ -52,6 +52,18 @@ window.addEventListener("scroll", () => {
         header.classList.remove("hidden");
     }
     lastScrollY = window.scrollY; // Update the last scroll position
+});
+
+// Animate desktop nav links
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach((link, index) => {
+        link.style.opacity = "0"; // Ensure the initial state is hidden
+        link.style.transform = "translateY(-80px)"; // Ensure the initial position is above
+        link.style.animation = `slideDown 0.8s ease forwards`;
+        link.style.animationDelay = `${index * 0.2}s`; // Add delay for each link
+    });
 });
 
 

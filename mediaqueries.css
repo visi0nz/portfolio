@@ -143,6 +143,13 @@
         align-items: center; /* Zentriere die Elemente vertikal */
     }
 
+    .nav-links a {
+        opacity: 0; /* Start hidden */
+        transform: translateY(-80px); /* Start slightly above */
+        animation: slideDown 0.8s ease forwards; /* Apply the animation */
+    }
+
+
     .language-toggle {
         display: flex;
         gap: 0.5rem; /* Add spacing between language buttons */

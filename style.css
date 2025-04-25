@@ -172,13 +172,53 @@ header.hidden {
     height: 80px;
 }
 
+/* Logo Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8); /* Start smaller */
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1); /* End at normal size */
+    }
+}
+
+/* Logo */
+
 .logo img {
     width: 100px;
     height: auto;
+    animation: fadeIn 1.5s ease forwards; /* Fade in on load */
+    transition: filter 0.3s ease; /* Smooth transition for the glow effect */
 }
+
+.logo img:hover {
+    filter: drop-shadow(0 0 2px rgb(221, 192, 29)) drop-shadow(0 0 2px rgb(221, 192, 29)); /* Add glow around the shape */
+}
+
 
 .desktop-nav {
     display: none;
+}
+
+/* Navlinks Animation */
+@keyframes slideDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-80px); /* Start slightly above */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at the original position */
+    }
+}
+
+.nav-links a {
+    opacity: 0; /* Start hidden */
+    transform: translateY(-80px); /* Start slightly above */
+    animation: slideDown 0.8s ease forwards; /* Apply the animation */
+    font-size: 1.1rem;
 }
 
 .nav-links {
@@ -187,9 +227,6 @@ header.hidden {
     gap: 2rem;
 }
 
-.nav-links a {
-    font-size: 1.1rem;
-}
 
 .nav-links a::before {
     counter-increment: navigation;
