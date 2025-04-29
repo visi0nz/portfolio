@@ -302,7 +302,10 @@
     }
 
     .project-image-container {
+        display: flex;
         flex: 1; /* Allow the image to take up available space */
+        flex-direction: column; /* Stack images vertically */
+        gap: 1rem;
         max-width: 50%; /* Limit the width of the image container */
         justify-content: center; /* Center the image horizontally */
         align-items: flex-start; /* Align the image at the top */
