@@ -121,6 +121,7 @@ section.animate {
     line-height: 1.7;
 }
 
+
 .section-text-2 {
     color: white;
     font-family: Lato;
@@ -590,6 +591,11 @@ header.hidden {
 
 
 /* --- Footer --- */
+.section-text-foot {
+    color:rgb(221, 192, 29);
+    line-height: 1.7;
+}
+
 footer {
     font-size: 80%;
     text-align: center;

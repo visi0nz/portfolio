@@ -149,7 +149,6 @@
         animation: slideDown 0.8s ease forwards; /* Apply the animation */
     }
 
-
     .language-toggle {
         display: flex;
         gap: 0.5rem; /* Add spacing between language buttons */
@@ -169,21 +168,51 @@
         padding: 2rem 0; /* Reduziere den vertikalen Abstand zwischen allen Sektionen */
     }
 
+    .container {
+        max-width: 1900px; /* Adjust as needed */
+        margin: 0 auto;
+        padding: 0 3rem;
+        box-sizing: border-box;
+    }
+
     #profile {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start; /* Inhalt nach links ausrichten */
-        padding-left: 5rem; /* Füge mehr Abstand links hinzu */
-        padding-right: 2rem; /* Optional: Reduziere den rechten Abstand */
-        margin-left: 0; /* Entferne jeglichen automatischen horizontalen Abstand */
-        width: 100%; /* Stelle sicher, dass die Sektion die volle Breite einnimmt */
-        max-width: 1200px; /* Begrenze die maximale Breite */
-        box-sizing: border-box; /* Padding wird in die Breite einbezogen */
+        align-items: flex-start; /* Align content to the left */
+        padding: 0 2rem; /* Add padding for spacing */
+        margin: 0 auto; /* Center the section horizontally */
+        margin-left: -2rem; /* Move the section 2rem to the left */
+        width: 100%; /* Ensure the section takes the full width */
+        max-width: 1400px; /* Increase the maximum width */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+
+    .profile-title-1 {
+        font-family: Lato, sans-serif;
+        font-weight: 600;
+        font-size: 6rem;
+        margin-bottom: 1rem;
+    }
+    
+    .profile-title-2 {
+        font-family: Lato, sans-serif;
+        font-weight: 600;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        width: 100%; /* Ensure the title takes the full width */
+        white-space: nowrap; /* Prevent the text from breaking into multiple lines */
+        box-sizing: border-box; /* Include padding in the width calculation */
+    }
+
+    .section-text {
+        max-width: 680px; /* Begrenze die Breite des Inhalts */
+        line-height: 1.7;
+        font-size: 1.2rem;
     }
 
     .profile-content {
-        max-width: 600px; /* Begrenze die Breite des Inhalts */
+        max-width: 700px; /* Begrenze die Breite des Inhalts */
         text-align: left; /* Text linksbündig ausrichten */
     }
 
