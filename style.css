@@ -130,6 +130,13 @@ section.animate {
     padding-top: 1rem;
 }
 
+.section-text-3 {
+    color: white;
+    font-family: Lato;
+    margin-bottom: 1rem; /* Add spacing between paragraphs */
+    line-height: 1.3rem;
+}
+
 .section-title-3 {
     font-weight: 600;
     font-size: 2rem;
@@ -524,7 +531,9 @@ header.hidden {
 .project-image {
     width: 100%; /* Ensure the image scales properly */
     height: auto; /* Maintain aspect ratio */
+    border: 2px solid rgb(221, 192, 29); /* Add a yellow outline */
     border-radius: 0.5rem; /* Optional: Add rounded corners */
+    box-sizing: border-box; /* Ensure the border is included in the element's dimensions */
 }
 
 

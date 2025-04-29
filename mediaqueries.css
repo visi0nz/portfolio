@@ -299,9 +299,11 @@
 
     .project-text {
         flex: 1; /* Allow the text to take up available space */
+        font-size: 0.9rem;
     }
 
     .project-image-container {
+        perspective: 1000px; /* Enable 3D perspective */
         display: flex;
         flex: 1; /* Allow the image to take up available space */
         flex-direction: column; /* Stack images vertically */
@@ -314,6 +316,12 @@
     .project-image {
         width: 100%; /* Ensure the image fills the container */
         height: auto; /* Maintain aspect ratio */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-image:hover {
+        transform: rotateY(10deg) rotateX(5deg); /* Add a 3D tilt */
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
     }
 }
 
