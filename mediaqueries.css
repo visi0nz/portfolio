@@ -50,7 +50,7 @@
     }
 
     .profile-title-1 {
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     .profile-title-2 {
@@ -183,6 +183,7 @@
         padding: 0 2rem; /* Add padding for spacing */
         margin: 0 auto; /* Center the section horizontally */
         margin-left: -2rem; /* Move the section 2rem to the left */
+        margin-top: 5rem;
         width: 100%; /* Ensure the section takes the full width */
         max-width: 1400px; /* Increase the maximum width */
         box-sizing: border-box; /* Include padding in the width calculation */
