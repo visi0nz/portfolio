@@ -557,10 +557,23 @@ header.hidden {
 }
 
 .project-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
     color: white;
     font-size: 2rem;
     text-decoration: none;
     padding: 0.1rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add consistent transition */
+}
+
+.project-github-link .github-text {
+    font-size: 0.8rem; /* Make the text smaller */
+    transition: color 0.3s ease; /* Ensure the text color transitions smoothly */
+}
+
+.project-github-link:hover .github-text {
+    color: rgb(221, 192, 29); /* Optional: Change text color on hover */
 }
 
 
