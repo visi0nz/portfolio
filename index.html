@@ -191,9 +191,11 @@
                                         <span>CSS</span>
                                         <span>JavaScript</span>
                                     </div>
-                                    <a href="https://github.com/visi0nz/portfolio" target="_blank" rel="noopener noreferrer" class="project-github-link">
-                                        <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">on GitHub</span>
-                                    </a>
+                                    <div class="project-links">
+                                        <a href="https://github.com/visi0nz/portfolio" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                            <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">on GitHub</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -206,7 +208,8 @@
                         <div class="project-details">
                             <div class="project-content">
                                 <div class="project-image-container">
-                                    <img src="./assets/project4.png" alt="Project 4" class="project-image">
+                                    <img src="./assets/animedatabase.png" alt="Project Anime Database" class="project-image">
+                                    <img src="./assets/animedatabase-2.png" alt="Project Anime Database" class="project-image">
                                 </div>
                                 <div class="project-text">
                                     <p class="section-text-3">This is a project for searching Anime series, with an integrated API.</p>
@@ -216,13 +219,52 @@
                                         <span>JavaScript</span>
                                         <span>React</span>
                                     </div>
-                                    <a href="https://github.com/visi0nz/animedatabase" target="_blank" rel="noopener noreferrer" class="project-github-link">
-                                        <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">on GitHub</span>
-                                    </a>
+                                    <div class="project-links">
+                                        <a href="https://github.com/visi0nz/animedatabase" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                            <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">on GitHub</span>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="project-item">
+                        <button class="project-title" onclick="toggleProject(this)">
+                            JavaScript Project: to-do list
+                            <span class="arrow-icon">▼</span>
+                        </button>
+                        <div class="project-details">
+                            <div class="project-content">
+                                <div class="project-image-container">
+                                    <img src="./assets/todolist.png" alt="Project to-do list" class="project-image">
+                                </div>
+                                <div class="project-text">
+                                    <p class="section-text-3">This is a JavaScript project about a to-do list.</p>
+                                    <p class="section-text-3">You can add tasks and delete them.</p>
+                                    <p class="section-text-3">It features a local storage, where you can keep the state of your to-do list 
+                                        even if you reload or close your browser.
+                                    </p>
+                                    <div class="project-skills">
+                                        <span>HTML</span>
+                                        <span>CSS</span>
+                                        <span>JavaScript</span>
+                                    </div>
+                                    <div class="project-links">
+                                        <a href="https://github.com/visi0nz/todolist" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                            <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">on GitHub</span>
+                                        </a>
+                                        <a href="https://visi0nz.github.io/todolist/" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                            <i class="fa-solid fa-arrow-up-right-from-square" alt="View Project"></i> <span class="github-text">view Project</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
         </section>
@@ -242,6 +284,9 @@
             </div>
         </section>
     </main>
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-image" src="">
+    </div>
     <footer>
         <p class="section-text-foot">Designed & Built by Emre Civas.</p>
         <div class="footer-links">

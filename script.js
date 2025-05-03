@@ -109,3 +109,25 @@ adjustFooterLinks();
 
 // Run the function on window resize
 window.addEventListener('resize', adjustFooterLinks);
+
+// JavaScript for Lightbox
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImage = document.getElementById("lightbox-image");
+    const projectImages = document.querySelectorAll(".project-image");
+
+    // Open lightbox when an image is clicked
+    projectImages.forEach((image) => {
+        image.addEventListener("click", () => {
+            lightbox.style.display = "flex"; // Show the lightbox
+            lightboxImage.src = image.src; // Set the lightbox image source
+        });
+    });
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener("click", (e) => {
+        if (e.target !== lightboxImage) {
+            lightbox.style.display = "none"; // Hide the lightbox
+        }
+    });
+});
