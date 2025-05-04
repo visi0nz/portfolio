@@ -101,7 +101,6 @@
 
     #featured-projects .project-title-featured {
         font-size: 1.5rem; /* Adjust font size for smaller screens */
-        text-align: center;
     }
 
     #featured-projects .project-description-featured {
