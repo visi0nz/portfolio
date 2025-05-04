@@ -37,9 +37,11 @@
                     <span></span>
                 </div>
                 <nav class="menu-links">
+                <ul>
                     <li><a href="#about" onclick="toggleMenu()">Über mich</a></li>
                     <li><a href="#projects" onclick="toggleMenu()">Projekte</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Kontakt</a></li>
+                </ul>
                 </nav>
             </div>
         </div>
@@ -54,7 +56,6 @@
                     <p class="section-text">
                         Digitale Produkte zu entwickeln, die benutzerfreundlich sind und Freude bereiten, sind genau mein Ding. 
                         Ich habe eine echte Leidenschaft für das Lernen neuer Technologien, das mich mich jedes Mal aufs Neue begeistert. 
-                        
                     </p>
                     <div id="socials-container">
                         <a href="https://www.linkedin.com/in/emre-civas/" target="_blank" rel="noopener noreferrer">
@@ -70,28 +71,25 @@
         <section id="about" class="section">
             <div class="container">
                 <div class="about-content">
+
                     <div class="about-text">
-                        <h2 class="section-title-ger">Über mich</h2>
+                        <h2 class="section-title">Über mich</h2>
                         <p class="section-text-2">
-                            Hi, ich bin Emre. Ich habe Online-Medien an der
-                            Hochschule Furtwangen studiert.
+                            Hi, ich bin Emre. Ich habe Online-Medien an der Hochschule Furtwangen studiert. 
                         </p>
                         <p class="section-text-2">
-                            Ich bin ein leidenschaftlicher Webentwickler und Mediendesigner.
-                            Ich habe Erfahrung in HTML, CSS und JavaScript,
-                            um außergewöhnliche Webseiten zu erstellen.
-                            Ich kenne mich mit Python, Adobe Creative Suite,
-                            Video- und Audioproduktion aus.
-                            Ich bin immer daran interessiert, neue Technologien zu lernen,
-                            um meine Fähigkeiten zu erweitern.
-                            Was mir wirklich beim Lernen hilft, ist der Prozess, Probleme anzugehen und selbstständig Lösungen zu erarbeiten.
+                            Ich bin ein leidenschaftlicher Webentwickler und Mediendesigner. 
+                            Ich habe Erfahrung in HTML, CSS und JavaScript, um außergewöhnliche Webseiten zu erstellen. 
+                            Ich kenne mich mit Python, Adobe Creative Suite, Video- und Audioproduktion aus. 
+                            Ich bin immer daran interessiert, neue Technologien zu lernen, um meine Fähigkeiten zu erweitern. 
+                            Was mir wirklich beim Lernen hilft, ist der Prozess, Probleme anzugehen und selbstständig Lösungen zu erarbeiten. 
                         </p>
                         <p class="section-text-2">
-                            Mein aktuelles Ziel ist es, mehr über Backend-Entwicklung zu lernen,
-                            indem ich an neuen Projekten mit C# und SQL arbeite.
+                            Mein aktuelles Ziel ist es, mehr über Backend-Entwicklung zu lernen, 
+                            indem ich an neuen Projekten mit C# und SQL arbeite. 
                         </p>
                         <p class="section-text-2">
-                            Dies sind einige meiner zuletzt genutzten Technologien:
+                            Dies sind einige meiner zuletzt genutzten Technologien: 
                         </p>
                         <ul class="about-tech-list">
                             <li>HTML</li>
@@ -111,130 +109,212 @@
                 </div>
             </div>
         </section>
-        <section id="projects" class="section">
+
+        <section id="featured-projects" class="section">
             <div class="container">
                 <h2 class="section-title-2">Projekte</h2>
-                <div class="project-list">
-                    <div class="project-item">
-                        <button class="project-title" onclick="toggleProject(this)">
-                            Corporate Design & Webseite: Gesundheitswesen
-                            <span class="arrow-icon">▼</span>
-                        </button>
-                        <div class="project-details">
-                            <div class="project-content">
-                                <div class="project-image-container">
-                                    <img src="./assets/project1.png" alt="Project 1" class="project-image">
-                                    <img src="./assets/project1-1.png" alt="Project 1" class="project-image">
-                                </div>
-                                <div class="project-text">
-                                    <p class="section-text-3">
-                                        Dies ist ein Projekt für einen mobilen Fußpflege Service.
-                                    </p>
-                                    <p class="section-text-3">
-                                        Ich habe das Logo, Visitenkarte und Flyer gestaltet.
-                                    </p>
-                                    <p class="section-text-3">
-                                        Die responsive Webseite wurde mit Wordpress erstellt.
-                                    </p>
-                                    <div class="project-skills">
-                                        <span>Adobe CS</span>
-                                        <span>Wordpress</span>
-                                    </div>
-                                </div>
-                            </div>
+                <div class="featured-project">
+                    <div class="project-image-container">
+                        <a href="./assets/project1-1.png" class="lightbox-trigger">
+                            <img src="./assets/project1-1.png" alt="Healthcare Business Website">
+                        </a>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title-featured">Corporate Design & Webseite: Gesundheitswesen</h3>
+                        <p class="project-description-featured">
+                            Ein umfassendes Projekt, das die Schaffung einer neuen Corporate Identity und Website für ein Healthcare-Unternehmen beinhaltete. 
+                            Dies umfasste Logodesign, Markenrichtlinien und eine vollständig responsive Website, die mit WordPress entwickelt wurde. 
+                            Das Ziel war es, eine professionelle und vertrauenswürdige Online-Präsenz aufzubauen.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Adobe CS</li>
+                            <li>WordPress</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="featured-project">
+                    <div class="project-image-container">
+                        <a href="./assets/project2.png" class="lightbox-trigger">
+                            <img src="./assets/project2.png" alt="Healthcare Business Website">
+                        </a>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title-featured">Corporate Design: Gastronomie</h3>
+                        <p class="project-description-featured">
+                            Ein umfassendes Projekt, das die Schaffung einer neuen Corporate Identity für ein Waffel & Eiscreme Laden beinhaltete. 
+                            Dies umfasste Logodesign, Markenrichtlinien.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Adobe CS</li>
+                            <li>WordPress</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="featured-project">
+                    <div class="project-image-container">
+                        <a href="./assets/portfolio-profil.png" class="lightbox-trigger">
+                            <img src="./assets/portfolio-profil.png" alt="Healthcare Business Website">
+                        </a>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title-featured">Portfolio Webseite</h3>
+                        <p class="project-description-featured">
+                            Dieses Projekt umfasst die Entwicklung und den Aufbau meines persönlichen Portfolios. 
+                            Ziel der Website ist es, meine Fähigkeiten, Erfahrungen und Projekte auf professionelle und ansprechende Weise zu präsentieren.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Adobe CS</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/visi0nz/portfolio" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">zum Code</span>
+                            </a>
+                            <a href="https://visi0nz.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                <i class="fa-solid fa-arrow-up-right-from-square" alt="View Project"></i> <span class="github-text">zum Projekt</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-item">
-                        <button class="project-title" onclick="toggleProject(this)">
-                            Corporate Design: Gastronomie
-                            <span class="arrow-icon">▼</span>
-                        </button>
-                        <div class="project-details">
-                            <div class="project-content">
-                                <div class="project-image-container">
-                                    <img src="./assets/project2.png" alt="Project 2" class="project-image">
-                                </div>
-                                <div class="project-text">
-                                    <p class="section-text-3">
-                                        Dieses Projekt war für einen Waffel & Eiscreme Shop.
-                                    </p>
-                                    <p class="section-text-3">
-                                        Wir haben ein Fotoshooting für qualitativ hochwertige Bilder durchgeführt.
-                                    </p>
-                                    <p class="section-text-3">
-                                        Ich habe das Logo, die Produktbilder für das Schaufenster, T-Shirt und Sticker gestaltet.
-                                    </p>
-                                    <div class="project-skills">
-                                        <span>Adobe CS</span>
-                                    </div>
-                                </div>
-                            </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="featured-project">
+                    <div class="project-image-container">
+                        <a href="./assets/animedatabase.png" class="lightbox-trigger">
+                            <img src="./assets/animedatabase.png" alt="Healthcare Business Website">
+                        </a>
+                    </div>
+                    <div class="project-details">
+                        <h3 class="project-title-featured">Datenbank für Animeserien</h3>
+                        <p class="project-description-featured">
+                            Dieses Projekt beinhaltet eine Webseite mit einer Suchfunktion für Animeserien die Zugriff zu einer Datenbank hat.
+                            Die Top Animes die am meisten aufgerufen wurden, werden mit einem Ranking angezeigt.
+                            Zu den gesuchten Animes gibt es eine durchschnittliche Bewertung und das Erscheinungsjahr.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Adobe CS</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                            <li>React</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="https://github.com/visi0nz/animedatabase" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">zum Code</span>
+                            </a>
                         </div>
                     </div>
-                    <div class="project-item">
-                        <button class="project-title" onclick="toggleProject(this)">
-                            Portfolio Webseite
-                            <span class="arrow-icon">▼</span>
-                        </button>
-                        <div class="project-details">
-                            <div class="project-content">
-                                <div class="project-image-container">
-                                    <img src="./assets/portfolio-profil.png" alt="Project 3" class="project-image">
-                                    <img src="./assets/portfolio-about.png" alt="Project 3" class="project-image">
-                                </div>
-                                <div class="project-text">
-                                    <p class="section-text-3">Dies ist meine persönliche Portfolio Webseite 
-                                        gestaltet mit einem simplistischem Design und programmiert von mir.</p>
-                                    <div class="project-skills">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                    </div>
-                                    <div class="project-links">
-                                        <a href="https://github.com/visi0nz/portfolio" target="_blank" rel="noopener noreferrer" class="project-github-link">
-                                            <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">auf GitHub</span>
-                                        </a>
+                </div>
+            </div>
 
-                                        <a href="https://visi0nz.github.io/todolist/" target="_blank" rel="noopener noreferrer" class="project-github-link">
-                                            <i class="fa-solid fa-arrow-up-right-from-square" alt="View Project"></i> <span class="github-text">zum Project</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title-4">andere Projekte</h2>
+                <div class="projects-tabs">
+                    <button class="tab-button" data-filter="all">All</button>
+                    <button class="tab-button" data-filter="html">HTML</button>
+                    <button class="tab-button" data-filter="css">CSS</button>
+                    <button class="tab-button" data-filter="javascript">JavaScript</button>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-tech="all html css javascript">
+                        <div class="project-image-container">
+                            <i class="fa-solid fa-folder"></i>
                         </div>
-                    </div>
-                    <div class="project-item">
-                        <button class="project-title" onclick="toggleProject(this)">
-                            Datenbank für Animeserien
-                            <span class="arrow-icon">▼</span>
-                        </button>
                         <div class="project-details">
-                            <div class="project-content">
-                                <div class="project-image-container">
-                                    <img src="./assets/project4.png" alt="Project 4" class="project-image">
-                                </div>
-                                <div class="project-text">
-                                    <p class="section-text-3">Ein Projekt zum Suchen von Animeserien mit integrierter API.</p>
-                                    <div class="project-skills">
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                        <span>React</span>
-                                    </div>
-                                    <a href="https://github.com/visi0nz/animedatabase" target="_blank" rel="noopener noreferrer" class="project-github-link">
-                                        <i class="fab fa-github" alt="View Project on GitHub"></i><span class="github-text">auf GitHub</span>
-                                    </a>
-                                </div>
+                            <h3 class="project-title-card">JS Projekt: To-Do-Liste</h3>
+                            <p class="project-description">
+                                Dies ist ein JavaScript-Projekt über eine To-Do-Liste. 
+                                Sie können Aufgaben hinzufügen und löschen. 
+                                Es verfügt über einen lokalen Speicher, in dem Sie den Zustand Ihrer To-Do-Liste speichern können, 
+                                auch wenn Sie Ihren Browser neu laden oder schließen.
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/visi0nz/todolist" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">zum Code</span>
+                                </a>
+                                <a href="https://visi0nz.github.io/todolist/" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" alt="View Project"></i> <span class="github-text">zum Projekt</span>
+                                </a>
                             </div>
                         </div>
                     </div>
+        
+                    <div class="project-card" data-tech="all html css javascript">
+                        <div class="project-image-container">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title-card">JS Projekt: To-Do-Liste</h3>
+                            <p class="project-description">
+                                Dies ist ein JavaScript-Projekt über eine To-Do-Liste. 
+                                Sie können Aufgaben hinzufügen und löschen. 
+                                Es verfügt über einen lokalen Speicher, in dem Sie den Zustand Ihrer To-Do-Liste speichern können, 
+                                auch wenn Sie Ihren Browser neu laden oder schließen.
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/visi0nz/todolist" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">zum Code</span>
+                                </a>
+                                <a href="https://visi0nz.github.io/todolist/" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" alt="View Project"></i> <span class="github-text">zum Projekt</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="project-card" data-tech="all html css javascript">
+                        <div class="project-image-container">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title-card">JS Projekt: To-Do-Liste</h3>
+                            <p class="project-description">
+                                Dies ist ein JavaScript-Projekt über eine To-Do-Liste. 
+                                Sie können Aufgaben hinzufügen und löschen. 
+                                Es verfügt über einen lokalen Speicher, in dem Sie den Zustand Ihrer To-Do-Liste speichern können, 
+                                auch wenn Sie Ihren Browser neu laden oder schließen.
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/visi0nz/todolist" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">zum Code</span>
+                                </a>
+                                <a href="https://visi0nz.github.io/todolist/" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fa-solid fa-arrow-up-right-from-square" alt="View Project"></i> <span class="github-text">zum Projekt</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
         <section id="contact" class="section">
             <div class="container">
                 <div class="contact-content">
-                    <h2 class="section-title-3">Schreib mir</h2>
+                    <h2 class="section-title-3">Sprich mich an</h2>
                     <p class="contact-text">
                         Ich bin immer auf der Suche nach neuen Herausforderungen und
                         Projekten um meine Fähigkeiten auszubauen. Ich freue mich darauf, von Ihnen zu hören.
@@ -246,6 +326,9 @@
             </div>
         </section>
     </main>
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-image" src="">
+    </div>
     <footer>
         <p class="section-text-foot">Design & Erstellung von Emre Civas.</p>
         <div class="footer-links">

@@ -77,10 +77,117 @@
         margin-top: 2rem;
     }
 
-    .project-details img {
-        width: 100%; /* Vergrößere die Breite des Bildes auf 100% des Containers */
-        height: auto; /* Behalte das Seitenverhältnis bei */
-        margin-bottom: 1rem; /* Optional: Abstand unterhalb des Bildes */
+    #featured-projects .featured-project {
+        flex-direction: column; /* Stack the image and text vertically */
+        align-items: center; /* Center the content horizontally */
+        gap: 1.5rem; /* Add spacing between the image and text */
+    }
+
+    #featured-projects .project-image-container {
+        max-width: 100%; /* Allow the image to take the full width */
+        text-align: center; /* Center the image */
+    }
+
+    #featured-projects .project-image-container img {
+        width: 100%; /* Ensure the image scales properly */
+        height: auto; /* Maintain aspect ratio */
+        border-radius: 0.5rem; /* Optional: Add rounded corners */
+    }
+
+    #featured-projects .project-details {
+        text-align: left; /* Center-align the text */
+        padding: 0 1rem; /* Add padding for spacing */
+    }
+
+    #featured-projects .project-title-featured {
+        font-size: 1.5rem; /* Adjust font size for smaller screens */
+    }
+
+    #featured-projects .project-description-featured {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.5; /* Improve readability */
+    }
+
+    #projects .projects-grid {
+        display: flex;
+        flex-direction: column; /* Stack project cards vertically */
+        gap: 2rem; /* Add spacing between project cards */
+    }
+
+    #projects .project-card {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: flex-start; /* Align content to the left */
+        text-align: left; /* Align text to the left */
+        padding: 1rem; /* Add padding for spacing */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Keep shadow for better visibility */
+    }
+
+    #projects .project-image-container {
+        max-width: 100%; /* Allow the image to take the full width */
+        margin-bottom: 1rem; /* Add spacing below the image */
+    }
+
+    .project-image-container i {
+        display: block; /* Ensure the icon behaves like a block element */
+        margin-left: 0; /* Reset any extra left margin */
+        margin-top: 2rem; /* Keep the top margin */
+        margin-bottom: 1rem; /* Keep the bottom margin */
+        font-size: 3rem; /* Keep the font size */
+        text-align: left; /* Align the content inside the icon to the left */
+    }
+
+    #projects .project-details {
+        text-align: left; /* Align text to the left */
+        padding: 0; /* Remove extra padding */
+    }
+
+    #projects .project-title-card {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+        margin-bottom: 0.5rem; /* Add spacing below the title */
+        color: rgb(221, 192, 29); /* Optional: Add color to the title */
+    }
+
+    #projects .project-description {
+        font-size: 1rem; /* Adjust font size for readability */
+        line-height: 1.5; /* Improve readability */
+        margin-bottom: 1rem; /* Add spacing below the description */
+    }
+
+    #projects .project-tech-list {
+        display: flex;
+        flex-wrap: wrap; /* Allow tech items to wrap to the next line */
+        justify-content: flex-start; /* Align the tech list to the left */
+        gap: 0.5rem; /* Add spacing between tech items */
+        margin-bottom: 1rem; /* Add spacing below the tech list */
+    }
+
+    #projects .project-tech-list li {
+        background-color: rgba(255, 255, 255, 0.1); /* Add a subtle background */
+        color: rgb(221, 192, 29); /* Yellow text color */
+        padding: 0.5rem 0.75rem; /* Add padding for better spacing */
+        border-radius: 1rem; /* Add rounded corners */
+        font-size: 0.8rem; /* Adjust font size */
+    }
+
+    #projects .project-links {
+        display: flex;
+        flex-direction: row; /* Display links horizontally */
+        gap: 1rem; /* Add spacing between links */
+        justify-content: flex-start; /* Align links to the left */
+    }
+
+    #projects .project-github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem; /* Add spacing between the icon and text */
+        color: white;
+        font-size: 1rem; /* Adjust font size */
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    #projects .project-github-link:hover {
+        color: rgb(221, 192, 29); /* Change color on hover */
     }
 
     #contact {
@@ -248,8 +355,14 @@
         border-radius: 0.75rem; /* Optional: Add rounded corners */
     }
 
+
+    #projects {
+        padding-top: 10rem; /* Optional: Fügt Abstand innerhalb der Other Projects hinzu */
+    }
+
+
     #projects .container {
-        max-width: 600px; /* Reduce the maximum width of the projects section */
+        max-width: 1200px; /* Reduce the maximum width of the projects section */
         margin: 0 auto; /* Center the section horizontally */
         padding: 0 2rem; /* Add horizontal padding for spacing */
     }
@@ -284,7 +397,6 @@
         background-color: rgb(34, 36, 78);
     }
     
-
     .project-list {
         display: flex;
         flex-direction: column; /* Stack project items vertically */

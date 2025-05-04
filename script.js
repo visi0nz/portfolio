@@ -69,24 +69,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Projects
 
-function toggleProject(button) {
-    const projectDetails = button.nextElementSibling; // Get the project details
-    const isVisible = projectDetails.style.display === "block";
+document.addEventListener("DOMContentLoaded", () => {
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const projectCards = document.querySelectorAll(".project-card");
 
-    // Close all other projects
-    document.querySelectorAll(".project-details").forEach((details) => {
-        details.style.display = "none";
-    });
-    document.querySelectorAll(".project-title").forEach((title) => {
-        title.classList.remove("open"); // Remove the 'open' class from all buttons
-    });
+    tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Entferne die aktive Klasse von allen Buttons
+            tabButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active"); // Füge die aktive Klasse zum geklickten Button hinzu
 
-    // Toggle the current project
-    if (!isVisible) {
-        projectDetails.style.display = "block";
-        button.classList.add("open"); // Add the 'open' class to the current button
-    }
-}
+            const filter = button.getAttribute("data-filter");
+
+            projectCards.forEach((card) => {
+                const techs = card.getAttribute("data-tech").split(" ");
+                if (filter === "all" || techs.includes(filter)) {
+                    card.style.display = "block"; // Zeige das Projekt an
+                } else {
+                    card.style.display = "none"; // Verstecke das Projekt
+                }
+            });
+        });
+    });
+});
 
 // Footer Links
 // Adjust target attribute for Impressum and Datenschutz links
@@ -110,24 +115,43 @@ adjustFooterLinks();
 // Run the function on window resize
 window.addEventListener('resize', adjustFooterLinks);
 
-// JavaScript for Lightbox
-document.addEventListener("DOMContentLoaded", () => {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightbox-image");
-    const projectImages = document.querySelectorAll(".project-image");
 
-    // Open lightbox when an image is clicked
-    projectImages.forEach((image) => {
-        image.addEventListener("click", () => {
-            lightbox.style.display = "flex"; // Show the lightbox
-            lightboxImage.src = image.src; // Set the lightbox image source
+// Lightbox
+
+document.addEventListener("DOMContentLoaded", () => {
+    const lightbox = document.createElement("div");
+    lightbox.classList.add("lightbox");
+    document.body.appendChild(lightbox);
+
+    const lightboxImage = document.createElement("img");
+    lightbox.appendChild(lightboxImage);
+
+    // Add a close button
+    const closeButton = document.createElement("button");
+    closeButton.classList.add("lightbox-close");
+    closeButton.innerHTML = "&times;"; // Close icon
+    lightbox.appendChild(closeButton);
+
+    const lightboxTriggers = document.querySelectorAll(".lightbox-trigger");
+
+    lightboxTriggers.forEach((trigger) => {
+        trigger.addEventListener("click", (e) => {
+            e.preventDefault(); // Prevent default anchor behavior
+            const imageSrc = trigger.getAttribute("href");
+            lightboxImage.src = imageSrc;
+            lightbox.classList.add("active");
         });
     });
 
-    // Close lightbox when clicking outside the image
+    // Close the lightbox when the close button is clicked
+    closeButton.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+    });
+
+    // Close the lightbox when clicking outside the image
     lightbox.addEventListener("click", (e) => {
-        if (e.target !== lightboxImage) {
-            lightbox.style.display = "none"; // Hide the lightbox
+        if (e.target === lightbox) {
+            lightbox.classList.remove("active");
         }
     });
 });

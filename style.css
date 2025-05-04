@@ -19,6 +19,7 @@ body {
 }
 
 main {
+    counter-reset: sections; /* Reset the counter for sections */
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -102,7 +103,7 @@ section.animate {
     font-size: 2rem;
     color: white;
     margin-bottom: 2rem;
-    text-align: left;
+    text-align: center;
     text-decoration: underline; /* Add an underline */
     text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
     text-decoration-thickness: 2px; /* Set the thickness of the underline */
@@ -110,18 +111,15 @@ section.animate {
 }
 
 .section-title-2::before {
-    counter-increment: sections;
     content: "0" counter(sections) ". ";
     color: rgb(221, 192, 29);
 }
-
 
 .section-text {
     color:rgb(221, 192, 29);
     line-height: 1.7;
     font-size: 1.1rem;
 }
-
 
 .section-text-2 {
     color: white;
@@ -150,12 +148,21 @@ section.animate {
 }
 
 .section-title-3::before {
-    counter-increment: sections;
     content: "0" counter(sections) ". ";
     color: rgb(221, 192, 29);
 }
 
-
+.section-title-4 {
+    font-weight: 600;
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-decoration: underline; /* Add an underline */
+    text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
+    text-decoration-thickness: 2px; /* Set the thickness of the underline */
+    text-underline-offset: 10px; /* Add spacing between the text and the underline */
+}
 
 /* --- Header & Navigation --- */
 header {
@@ -450,92 +457,201 @@ header.hidden {
 }
 
 
-/* --- Projects Section --- */
-
-#projects {
-    counter-increment: sections;
+/* --- Featured Projects Section --- */
+#featured-projects {
+    counter-increment: sections; /* Increment the counter for this section */
 }
 
-.project-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem; /* Abstand zwischen den Projekten */
+#featured-projects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.project-item {
-    border: 1px solid #ccc;
-    border-radius: 0.5rem;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.project-title {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
+#featured-projects .section-title-2 {
     text-align: left;
-    background-color: rgb(23, 25, 63);
+}
+
+#featured-projects .featured-project {
+    margin-bottom: 60px;
+    display: flex; /* Enable flexbox for side-by-side layout */
+    flex-direction: row; /* Ensure items are in a row */
+    align-items: center; /* Vertically center items */
+    gap: 2rem; /* Add some gap between image and text */
+}
+
+/* Container for the 3D effect */
+#featured-projects .project-image-container {
+    perspective: 1000px; /* Add perspective for the 3D effect */
+    display: inline-block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for tilt and shadow */
+}
+
+#featured-projects .project-image-container:hover {
+    transform: scale(1.05); /* Slightly scale the image on hover */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+/* Image inside the container */
+#featured-projects .project-image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 2px solid rgb(221, 192, 29); /* Add a yellow border */
+    border-radius: 8px; /* Optional: Add rounded corners */
+    transition: transform 0.3s ease; /* Smooth transition for the image */
+    transform-origin: center; /* Set the origin for the tilt effect */
+}
+
+
+
+#featured-projects .project-details {
+    flex: 1; /* Allow text container to take up space */
+    padding-top: 0; /* Reset padding-top to avoid extra space */
+}
+
+
+#featured-projects .project-title-featured {
+    font-size: 1.2rem;
     color: rgb(221, 192, 29);
-    font-size: 1rem;
-    font-family: "IBM Plex Mono";
-    padding: 0.5rem;
-    border: none;
+    margin-bottom: 10px;
+}
+
+#featured-projects .project-description-featured {
+    font-family: Lato;
+    line-height: 1.5;
+    color: white;
+    background-color: rgb(34, 36, 78); /* Semi-transparent background */
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+    position: relative; /* Allows for absolute positioning of pseudo-element */
+}
+
+/* --- Other Projects Section --- */
+#projects {
+    counter-increment: none; /* Prevent this section from incrementing the counter */
+}
+
+
+#projects .section-title-2::before {
+    content: "0" counter(sections) ". ";
+    color: rgb(221, 192, 29);
+}
+
+.projects-tabs {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 2rem;
+}
+
+.tab-button {
+    background: none;
+    border: 1px solid rgb(221, 192, 29);
+    color: white;
+    padding: 0.5rem 1rem;
     cursor: pointer;
-    outline: none;
     transition: background-color 0.3s ease;
 }
 
-.project-title:hover {
+.tab-button.active {
+    background-color: rgb(221, 192, 29);
+    color: black;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 2rem;
+}
+
+.project-card {
     background-color: rgb(34, 36, 78);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
-.arrow-icon {
-    font-size: 1rem;
-    transition: transform 0.3s ease; /* Smooth rotation animation */
-}
-
-.project-title.open .arrow-icon {
-    transform: rotate(180deg); /* Rotate the arrow when the project is open */
-}
-
-.project-details {
-    display: none; /* Verstecke die Details standardmäßig */
-    padding: 1rem;
-    font-family: Lato;
-    background-color: rgb(34, 36, 78);
-}
-
-.project-content {
-    display: flex;
-    flex-direction: column; /* Stack text and image vertically */
-    align-items: flex-start; /* Align text and image at the top */
-    gap: 1rem; /* Add spacing between text and image */
-}
-
-.project-text {
-    flex: 1; /* Allow the text to take up available space */
-    text-align: left;
+.project-card:hover {
+    transform: translateY(-0.5rem);
+    color: rgb(221, 192, 29);
 }
 
 .project-image-container {
-    flex: 1; /* Allow the image to take up available space */
-    flex-direction: column; /* Stack images vertically */
-    gap: 1rem; /* Add spacing between the images */
-    display: flex; /* Use Flexbox to align the image */
-    justify-content: center; /* Center the image horizontally */
-    align-items: flex-start; /* Align the image at the top */
+    position: relative;
+    overflow: hidden;
 }
 
-.project-image {
-    width: 100%; /* Ensure the image scales properly */
-    height: auto; /* Maintain aspect ratio */
-    border: 2px solid rgb(221, 192, 29); /* Add a yellow outline */
-    border-radius: 0.5rem; /* Optional: Add rounded corners */
-    box-sizing: border-box; /* Ensure the border is included in the element's dimensions */
-    cursor: pointer; /* Change the cursor to a pointer on hover */
+.project-image-container i {
+    align-items: center;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
 }
+
+.project-details {
+    padding: 1rem;
+}
+
+.project-title-card {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    font-family: Lato;
+    font-size: 1rem;
+    line-height: 1.4;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.project-tech-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-tech-list li {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: rgb(221, 192, 29);
+    padding: 0.5rem 0.5rem;
+    border-radius: 1rem;
+    font-size: 0.75rem;
+}
+
+.project-links {
+    font-family: Lato;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0.1rem;
+    transition: color 0.3s ease, transform 0.3s ease; /* Add consistent transition */
+}
+
+.project-github-link .github-text {
+    font-size: 0.9rem; /* Make the text smaller */
+    transition: color 0.3s ease; /* Ensure the text color transitions smoothly */
+}
+
+.project-github-link:hover .github-text {
+    color: rgb(221, 192, 29); /* Optional: Change text color on hover */
+}
+
+
+/* Lightbox */
 
 .lightbox {
     display: none; /* Hidden by default */
@@ -559,54 +675,32 @@ header.hidden {
     border: 2px solid rgb(221, 192, 29); /* Add a yellow outline */
 }
 
-.project-skills {
-    display: flex; /* Use Flexbox for layout */
-    flex-wrap: wrap; /* Allow items to wrap to the next line */
-    gap: 0.5rem; /* Add spacing between skill items */
-    justify-content: flex-start; /* Align items to the left */
-    margin-top: 1.5rem; /* Vergrößert den Abstand oberhalb der Skills */
-    margin-bottom: 1rem; /* Vergrößert den Abstand unterhalb der Skills */
+.lightbox.active {
+    display: flex; /* Show the lightbox when active */
 }
 
-.project-skills span{
-    background-color: rgba(255, 255, 255, 0.1);
-    color: rgb(221, 192, 29);
-    padding: 0.5rem 0.75rem;
-    border-radius: 1rem;
-    font-size: 0.75rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    white-space: nowrap; /* Prevent text from breaking inside the span */
-}
-
-.project-links {
-    display: flex;
-    flex-direction: column; /* Stack the links vertically */
-    gap: 1rem; /* Add spacing between the links */
-}
-
-.project-github-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
+/* Close button styling */
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
     color: white;
-    font-size: 1.5rem;
-    text-decoration: none;
-    padding: 0.1rem;
-    transition: color 0.3s ease, transform 0.3s ease; /* Add consistent transition */
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1001; /* Ensure it appears above the lightbox content */
+    transition: color 0.3s ease;
 }
 
-.project-github-link .github-text {
-    font-size: 0.8rem; /* Make the text smaller */
-    transition: color 0.3s ease; /* Ensure the text color transitions smoothly */
-}
-
-.project-github-link:hover .github-text {
-    color: rgb(221, 192, 29); /* Optional: Change text color on hover */
+.lightbox-close:hover {
+    color: rgb(221, 192, 29); /* Change color on hover */
 }
 
 
 /* --- Contact Section --- */
 #contact {
+    counter-increment: sections; /* Increment the counter for the contact section */
     display: flex;
     flex-direction: column;
     align-items: center;
