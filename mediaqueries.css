@@ -118,18 +118,13 @@
         flex-direction: column; /* Stack image and text vertically */
         align-items: flex-start; /* Align content to the left */
         text-align: left; /* Align text to the left */
-        padding: 1rem; /* Add padding for spacing */
+        padding: 0rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Keep shadow for better visibility */
-    }
-
-    #projects .project-image-container {
-        max-width: 100%; /* Allow the image to take the full width */
-        margin-bottom: 1rem; /* Add spacing below the image */
     }
 
     .project-image-container i {
         display: block; /* Ensure the icon behaves like a block element */
-        margin-left: 0; /* Reset any extra left margin */
+        margin-left: 1rem; /* Reset any extra left margin */
         margin-top: 2rem; /* Keep the top margin */
         margin-bottom: 1rem; /* Keep the bottom margin */
         font-size: 3rem; /* Keep the font size */
@@ -138,7 +133,7 @@
 
     #projects .project-details {
         text-align: left; /* Align text to the left */
-        padding: 0; /* Remove extra padding */
+        padding: 1; 
     }
 
     #projects .project-title-card {
@@ -174,6 +169,7 @@
         flex-direction: row; /* Display links horizontally */
         gap: 1rem; /* Add spacing between links */
         justify-content: flex-start; /* Align links to the left */
+        margin-bottom: 1rem;
     }
 
     #projects .project-github-link {

@@ -514,6 +514,13 @@ header.hidden {
     counter-increment: none; /* Prevent this section from incrementing the counter */
 }
 
+#projects .project-image-container img {
+    width: 100%; /* Fülle die gesamte Breite des Containers */
+    height: 100%; /* Fülle die gesamte Höhe des Containers */
+    object-fit: cover; /* Schneide das Bild zu, um es proportional zu skalieren */
+    display: block; /* Entferne zusätzliche Leerzeichen unterhalb des Bildes */
+}
+
 
 #projects .section-title-2::before {
     content: "0" counter(sections) ". ";
