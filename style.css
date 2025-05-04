@@ -79,25 +79,6 @@ img {
     color: rgb(221, 192, 29);
 }
 
-
-.section-title-ger {
-    font-weight: 600;
-    font-size: 2rem;
-    color: white;
-    margin-bottom: 2rem;
-    text-align: left;
-    text-decoration: underline; /* Add an underline */
-    text-decoration-color: rgb(221, 192, 29); /* Set the underline color to yellow */
-    text-decoration-thickness: 2px; /* Set the thickness of the underline */
-    text-underline-offset: 10px; /* Add spacing between the text and the underline */
-}
-
-.section-title-ger::before {
-    counter-increment: sections;
-    content: "0" counter(sections) ". ";
-    color: rgb(221, 192, 29);
-}
-
 .section-title-2 {
     font-weight: 600;
     font-size: 2rem;
