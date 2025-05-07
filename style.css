@@ -454,7 +454,8 @@ header.hidden {
 
 .projects-tabs {
     display: flex;
-    justify-content: left;
+    justify-content: center;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
