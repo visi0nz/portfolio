@@ -77,37 +77,6 @@
         margin-top: 2rem;
     }
 
-    #featured-projects .featured-project {
-        flex-direction: column; /* Stack the image and text vertically */
-        align-items: center; /* Center the content horizontally */
-        gap: 1.5rem; /* Add spacing between the image and text */
-    }
-
-    #featured-projects .project-image-container {
-        max-width: 100%; /* Allow the image to take the full width */
-        text-align: center; /* Center the image */
-    }
-
-    #featured-projects .project-image-container img {
-        width: 100%; /* Ensure the image scales properly */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 0.5rem; /* Optional: Add rounded corners */
-    }
-
-    #featured-projects .project-details {
-        text-align: left; /* Center-align the text */
-        padding: 0 1rem; /* Add padding for spacing */
-    }
-
-    #featured-projects .project-title-featured {
-        font-size: 1.5rem; /* Adjust font size for smaller screens */
-    }
-
-    #featured-projects .project-description-featured {
-        font-size: 1rem; /* Adjust font size for readability */
-        line-height: 1.5; /* Improve readability */
-    }
-
     #projects .projects-grid {
         display: flex;
         flex-direction: column; /* Stack project cards vertically */

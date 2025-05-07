@@ -22,7 +22,7 @@
             <nav class="desktop-nav">
                 <ul class="nav-links">
                     <li><a href="#about">About</a></li>
-                    <li><a href="#featured-projects">Projects</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -39,7 +39,7 @@
                 <nav class="menu-links">
                 <ul>
                     <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#featured-projects" onclick="toggleMenu()">Projects</a></li>
+                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
                     <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
                 </ul>
                 </nav>
@@ -120,127 +120,131 @@
             </div>
         </section>
 
-        <section id="featured-projects" class="section">
-            <div class="container">
-                <h2 class="section-title-2">Projects</h2>
-                <div class="featured-project">
-                    <div class="project-image-container">
-                        <a href="./assets/project1-1.png" class="lightbox-trigger">
-                        <img src="./assets/project1-1.png" alt="Healthcare Business Website" loading="lazy">
-                    </a>
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title-featured">Corporate Design & Website: Healthcare Business</h3>
-                        <p class="project-description-featured">
-                            A comprehensive project involving the creation of a new corporate identity and website
-                            for a healthcare business. This included logo design, brand guidelines, and a fully
-                            responsive website developed with WordPress. The goal was to establish a professional
-                            and trustworthy online presence.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Adobe CS</li>
-                            <li>WordPress</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="featured-project">
-                    <div class="project-image-container">
-                        <a href="./assets/project2.png" class="lightbox-trigger">
-                            <img src="./assets/project2.png" alt="Food Business" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title-featured">Corporate Design: Food Business</h3>
-                        <p class="project-description-featured">
-                            A comprehensive project involving the creation of a new corporate identity for a food business. 
-                            This included logo design, product design and presentation for potential customers.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Adobe CS</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="featured-project">
-                    <div class="project-image-container">
-                        <a href="./assets/portfolio-profil.png" class="lightbox-trigger">
-                            <img src="./assets/portfolio-profil.png" alt="My personal Portfolio" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title-featured">Portfolio Website</h3>
-                        <p class="project-description-featured">
-                            This project involves the development and construction of my personal portfolio. 
-                            The goal of the website is to present my skills, experiences, and projects in a professional and appealing manner.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Adobe CS</li>
-                            <li>HTML</li>
-                            <li>CSS</li>
-                            <li>JavaScript</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/visi0nz/portfolio" target="_blank" rel="noopener noreferrer" class="project-github-link">
-                                <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="featured-project">
-                    <div class="project-image-container">
-                        <a href="./assets/animedatabase.png" class="lightbox-trigger">
-                            <img src="./assets/animedatabase.png" alt="Anime Database" loading="lazy">
-                        </a>
-                    </div>
-                    <div class="project-details">
-                        <h3 class="project-title-featured">Anime Database</h3>
-                        <p class="project-description-featured">
-                            A comprehensive project about a search platform for anime series.
-                            The top most viewed animes are displayed with a ranking. 
-                            The searched animes show an average rating and the year of release. 
-                            It uses an integrated API to fetch anime series and display it to the user.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Adobe CS</li>
-                            <li>HTML</li>
-                            <li>Tailwind CSS</li>
-                            <li>JavaScript</li>
-                            <li>React</li>
-                            <li>API</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com/visi0nz/animedatabase" target="_blank" rel="noopener noreferrer" class="project-github-link">
-                                <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">View Code</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
         <section id="projects" class="section">
             <div class="container">
-                <h2 class="section-title-4">other Projects</h2>
+                <h2 class="section-title-2">Projects</h2>
                 <div class="projects-tabs">
                     <button class="tab-button" data-filter="all">All</button>
                     <button class="tab-button" data-filter="html">HTML</button>
                     <button class="tab-button" data-filter="css">CSS</button>
+                    <button class="tab-button" data-filter="tailwind">Tailwind CSS</button>
                     <button class="tab-button" data-filter="javascript">JavaScript</button>
                     <button class="tab-button" data-filter="api">API</button>
                     <button class="tab-button" data-filter="ai">AI</button>
+                    <button class="tab-button" data-filter="adobecs">Adobe CS</button>
+                    <button class="tab-button" data-filter="wordpress">Wordpress</button>
                 </div>
                 <div class="projects-grid">
-                    <div class="project-card" data-tech="all html css javascript">
-                        <img src="./assets/todolist.png" alt="">
-                        <div class="project-image-container">
+                    <div class="project-card" data-tech="all adobecs wordpress">
+                        <a href="./assets/project1.png" class="lightbox-trigger">
+                            <img src="./assets/project1.png" alt="Healthcare Business Website" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
                             <i class="fa-solid fa-folder"></i>
                         </div>
-                        
+                        <div class="project-details">
+                            <h3 class="project-title-card">Corporate Design & Website: Healthcare Business</h3>
+                            <p class="project-description">
+                                A comprehensive project involving the creation of a new corporate identity and website for a healthcare business. 
+                                This included logo design, brand guidelines, and a fully responsive website developed with WordPress. 
+                                The goal was to establish a professional and trustworthy online presence. 
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>Adobe CS</li>
+                                <li>Wordpress</li>
+                            </ul>
+                            <div class="project-links">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tech="all adobecs">
+                        <a href="./assets/project2.png" class="lightbox-trigger">
+                            <img src="./assets/project2.png" alt="Food Business" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title-card">Corporate Design: Food Business</h3>
+                            <p class="project-description">
+                                A comprehensive project involving the creation of a new corporate identity for a food business. 
+                                This included logo design, product design and presentation for potential customers. 
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>Adobe CS</li>
+                            </ul>
+                            <div class="project-links">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tech="all adobecs html css javascript">
+                        <a href="./assets/portfolio-eng.png" class="lightbox-trigger">
+                            <img src="./assets/portfolio-eng.png" alt="My personal Portfolio" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title-card">Website: Portfolio</h3>
+                            <p class="project-description">
+                                This project involves the development and construction of my personal portfolio. 
+                                The goal of the website is to present my skills, experiences, 
+                                and projects in a professional and appealing manner. 
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>Adobe CS</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://visi0nz.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">View Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tech="all adobecs html tailwind javascript react api">
+                        <a href="./assets/animedatabase.png" class="lightbox-trigger">
+                            <img src="./assets/animedatabase.png" alt="Anime Database" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
+                        <div class="project-details">
+                            <h3 class="project-title-card">React Project: Anime Database</h3>
+                            <p class="project-description">
+                                A comprehensive project about a search platform for anime series. 
+                                The top most viewed animes are displayed with a ranking. 
+                                The searched animes show an average rating and the year of release. 
+                                It uses an integrated API to fetch anime series and display it to the user. 
+                            </p>
+                            <ul class="project-tech-list">
+                                <li>Adobe CS</li>
+                                <li>HTML</li>
+                                <li>Tailwind CSS</li>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>API</li>
+                            </ul>
+                            <div class="project-links">
+                                <a href="https://github.com/visi0nz/animedatabase" target="_blank" rel="noopener noreferrer" class="project-github-link">
+                                    <i class="fab fa-github" alt="View Project on GitHub"></i> <span class="github-text">View Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-tech="all html css javascript">
+                        <a href="./assets/todolist.png" class="lightbox-trigger">
+                            <img src="./assets/todolist.png" alt="To-Do List" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
+                            <i class="fa-solid fa-folder"></i>
+                        </div>
                         <div class="project-details">
                             <h3 class="project-title-card">JS Project: To-Do List</h3>
                             <p class="project-description">
@@ -266,8 +270,10 @@
                     </div>
         
                     <div class="project-card" data-tech="all html css javascript api">
-                        <img src="./assets/imagesearch.png" alt="">
-                        <div class="project-image-container">
+                        <a href="./assets/imagesearch.png" class="lightbox-trigger">
+                            <img src="./assets/imagesearch.png" alt="Image Search Engine" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
                             <i class="fa-solid fa-folder"></i>
                         </div>
                         <div class="project-details">
@@ -294,8 +300,10 @@
                     </div>
 
                     <div class="project-card" data-tech="all html css javascript api ai">
-                        <img src="./assets/ai-imagegenerator.png" alt="">
-                        <div class="project-image-container">
+                        <a href="./assets/ai-imagegenerator.png" class="lightbox-trigger">
+                            <img src="./assets/ai-imagegenerator.png" alt="AI Image Generator" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
                             <i class="fa-solid fa-folder"></i>
                         </div>
                         <div class="project-details">
@@ -325,8 +333,10 @@
                     </div>
 
                     <!-- <div class="project-card" data-tech="all html css javascript">
-                        <img src="./assets/" alt="">
-                        <div class="project-image-container">
+                        <a href="./assets/image-slider.png" class="lightbox-trigger">
+                            <img src="./assets/image-slider.png" alt="Image Slider" loading="lazy">
+                        </a>
+                        <div class="project-image-folder">
                             <i class="fa-solid fa-folder"></i>
                         </div>
                         <div class="project-details">

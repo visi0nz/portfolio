@@ -437,86 +437,15 @@ header.hidden {
     filter: none;
 }
 
-
-/* --- Featured Projects Section --- */
-#featured-projects {
+/* --- Projects Section --- */
+#projects {
     counter-increment: sections; /* Increment the counter for this section */
 }
 
-#featured-projects .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+#projects .project-card img {
+    border: 2px solid rgb(221, 192, 29);
+    border-radius: 0.5rem;
 }
-
-#featured-projects .section-title-2 {
-    text-align: center;
-}
-
-#featured-projects .featured-project {
-    margin-bottom: 60px;
-    display: flex; /* Enable flexbox for side-by-side layout */
-    flex-direction: row; /* Ensure items are in a row */
-    align-items: center; /* Vertically center items */
-    gap: 2rem; /* Add some gap between image and text */
-}
-
-/* Container for the 3D effect */
-#featured-projects .project-image-container {
-    display: inline-block;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for tilt and shadow */
-}
-
-#featured-projects .project-image-container:hover {
-    transform: scale(1.05); /* Slightly scale the image on hover */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-}
-
-/* Image inside the container */
-#featured-projects .project-image-container img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 2px solid rgb(221, 192, 29); /* Add a yellow border */
-    border-radius: 8px; /* Optional: Add rounded corners */
-    transition: transform 0.3s ease; /* Smooth transition for the image */
-    transform-origin: center; /* Set the origin for the tilt effect */
-}
-
-#featured-projects .project-details {
-    flex: 1; /* Allow text container to take up space */
-    padding-top: 0; /* Reset padding-top to avoid extra space */
-}
-
-#featured-projects .project-title-featured {
-    font-size: 1.2rem;
-    color: rgb(221, 192, 29);
-    margin-bottom: 10px;
-}
-
-#featured-projects .project-description-featured {
-    font-family: Lato;
-    line-height: 1.5;
-    color: white;
-    background-color: rgb(34, 36, 78); /* Semi-transparent background */
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
-    position: relative; /* Allows for absolute positioning of pseudo-element */
-}
-
-/* --- Other Projects Section --- */
-#projects {
-    counter-increment: none; /* Prevent this section from incrementing the counter */
-}
-
-#projects .project-image-container img {
-    width: 100%; /* Fülle die gesamte Breite des Containers */
-    height: 100%; /* Fülle die gesamte Höhe des Containers */
-    object-fit: cover; /* Schneide das Bild zu, um es proportional zu skalieren */
-    display: block; /* Entferne zusätzliche Leerzeichen unterhalb des Bildes */
-}
-
 
 #projects .section-title-2::before {
     content: "0" counter(sections) ". ";
@@ -562,12 +491,12 @@ header.hidden {
     color: rgb(221, 192, 29);
 }
 
-.project-image-container {
+.project-image-folder{
     position: relative;
     overflow: hidden;
 }
 
-.project-image-container i {
+.project-image-folder i {
     align-items: center;
     margin-left: 1rem;
     margin-top: 2rem;
